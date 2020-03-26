@@ -1,0 +1,17 @@
+uuid: 50d0d805-403a-4536-9167-307c3c7b3dfc
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: nWs03hJ5RzZ_43KzD0iA9-vMAHZolS82q8ZI1whQZJ4
+id: staging
+label: Staging
+description: 'Configuration for use on shared staging environments.'
+folder: ../config/config_split/staging
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: -2

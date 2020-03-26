@@ -1,0 +1,19 @@
+---
+
+- name: Solr | Start the Solr service
+  become: true
+  service:
+    name: solr
+    state: started
+    enabled: yes
+  when: solr_enabled == True
+  tags: solr
+
+- name: Solr | Stop the Solr service
+  become: true
+  service:
+    name: solr
+    state: stopped
+    enabled: no
+  when: solr_enabled != True
+  tags: solr
