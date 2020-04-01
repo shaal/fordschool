@@ -34,7 +34,7 @@ call_user_func(function() use (&$conf, &$databases, &$base_url) {
   /**
    * Hard-code the base-url.
    */
-  $base_url = 'http://d7.fordschool.local';
+  $base_url = 'https://d7.fordschool.local';
 
   /**
    * Enable context debug reaction.
