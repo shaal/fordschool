@@ -1,204 +1,91 @@
-# Drupal Skeleton
+# { University of Michigan Ford School }
 
-This is a template for starting Drupal 8 projects using the `composer create-project` command.
+This is the development repository for *University of Michigan Ford School* Drupal 8 website.
+It contains the codebase and an environment to run the site for development.
 
-## Quick start
+## Table of Contents
 
-This "quick start" section will show you how to set up a local server accessible at `http://example.local` with Drupal ready to install.
+* [Development Environment](#development-environment)
+* [Getting Started](#getting-started)
+* [How do I work on this?](#how-do-i-work-on-this)
+* [Drupal Development](#drupal-development)
+* [Deployment](#Deployment)
+* [Styleguide Development](#styleguide-development)
+* [Additional Documentation](#additional-documentation)
 
-### Preface
+## Development Environment
 
-You should have the development dependencies installed on your Mac before you begin. These dependencies are not project-specific, and you may have some or all of them already installed. If you don't, find a location with good internet and set aside at least an hour to complete this step.
+The development environment is based on [palantirnet/the-vagrant](https://github.com/palantirnet/the-vagrant).
+To run the environment, you will need:
 
-The development dependencies are:
+* Mac OS X >= 10.13. _This stack may run under other host operating systems, but is not regularly tested.
+For details on installing these dependencies on your Mac,
+see our [Mac setup doc [internal]](https://github.com/palantirnet/documentation/wiki/Mac-Setup)._
+* [Composer](https://getcomposer.org)
+* [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 5.0
+* [ansible](https://github.com/ansible/ansible) `brew install ansible`
+* [vagrant](https://www.vagrantup.com/) >= 2.1.0
+* Vagrant plugins:
+  * [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager) `vagrant plugin install vagrant-hostmanager`
+  * [vagrant-auto_network](https://github.com/oscar-stack/vagrant-auto_network) `vagrant plugin install vagrant-auto_network`
 
-* PHP 7
-  * Check your PHP version from the command line using `php --version`
-* [XCode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
-* [Composer](https://getcomposer.org/download/)
-* [Ansible](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-  * We recommend installing with [homebrew](https://brew.sh/): `brew install ansible`
-* [Vagrant](https://www.vagrantup.com/downloads.html)
-* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* Vagrant plugins: [hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager) and [auto_network](https://github.com/oscar-stack/vagrant-auto_network)
-  * Install both with this command: `vagrant plugin install vagrant-hostmanager vagrant-auto_network`
+If you update Vagrant, you may need to update your vagrant plugins with `vagrant plugin update`.
 
-Once you have your dependencies installed, setting up this skeleton will take at least another hour, depending on your internet connection.
+## Getting Started
 
-Some of the commands below will prompt you for a response, with the default answer in brackets. For this quick start, hit return to accept each default answer:
-
-```
-Enter a short name for your project [example] :
-```
-
-### Steps
-
-1. Create a new project called "example" based on this template:
-
-  ```
-  composer create-project palantirnet/drupal-skeleton example dev-develop --no-interaction
-  ```
-2. Go into your new project directory and run the script from `palantirnet/the-vagrant` to set up a Vagrant environment:
+1. Clone the project from github: `git clone https://github.com/palantirnet/fordschool.git`
+1. From inside the project root, run:
 
   ```
-  cd example
-  vendor/bin/the-vagrant-installer
+    vagrant up
   ```
-  
-3. From inside the VM, run the script from `palantirnet/the-build` to set up the default Drupal variables and install Drupal:
+3. You will be prompted for the administration password on your host machine
+4. Log in to the virtual machine (the VM): `vagrant ssh`
+5. From within the VM, build and install the Drupal site: `phing install`
+1. Visit your site at [fordschool.local](http://fordschool.local)
 
-  ```
-  vagrant up
-  vagrant ssh
-  vendor/bin/the-build-installer
-  ```
+## How do I work on this?
 
-5. In your web browser, visit [http://example.local](http://example.local) -- if you type in this URL, you will need to include the `http://` portion for your browser find the site.
-6. _Optional:_ While you are logged into the Vagrant environment, you can run Drush commands like `drush status`.
+You can edit code, update documentation, and run git commands by opening files directly from your host machine.
 
-### Extra Credit
+To run project-related commands other than `vagrant up` and `vagrant ssh`:
 
-* Update the `README.md` based on the contents of `README.dist.md`
-* Update the project name in the `composer.json` file, then run `composer update --lock`
-* Initialize a git repository and commit your work
-* Access your database via phpMyAdmin at [http://example.local/phpmyadmin](http://example.local/phpmyadmin) using the username `drupal` and the password `drupal`
-* View email sent by your development site at [http://example.local:8025](http://example.local:8025)
-* View your Solr 4.5 server at [http://example.local:8983/solr](http://example.local:8983/solr)
-* Note that renaming or moving this `example/` directory can break your Vagrant machine
+* SSH into the VM with `vagrant ssh`
+* You'll be in your project root, at the path `/var/www/fordschool.local/`
+* You can run `composer`, `drush`, and `phing` commands from here
 
-## Full Project Setup
+To work on the styleguide:
 
-### Create a project with a custom name
+* @todo TBA when styleguide is added to the repo.
 
-Use composer to create a new project based on this skeleton, replacing `PROJECTNAME` with the short name for your project:
+## Drupal Development
 
-```
-composer create-project palantirnet/drupal-skeleton PROJECTNAME dev-develop --no-interaction
-```
+You can refresh/reset your local Drupal site at any time. SSH into your VM and then:
 
-### Update your documentation
+1. Download the most current dependencies: `composer install`
+2. Rebuild your local CSS and Drupal settings file: `phing build`
+3. Reinstall Drupal: `phing install` (this will run `build` implicitly)
 
-Update the `README`:
+Additional information on developing for Drupal within this environment is in [docs/general/drupal_development.md](docs/general/drupal_development.md).
 
-  * Remove the `README.md`
-  * Rename the `README.dist.md` to `README.md`
-  * Edit as you like
+## Deployment
 
-Update the `LICENSE.txt`:
+@todo This section needs to be customized per-project.
 
-  * Remove or replace this file with the appropriate license for your project. (The existing license applies to the Drupal Skeleton template only.)
+## Styleguide Development
 
-Update the `composer.json`:
+@todo
 
-  * Change the `name` from `palantirnet/drupal-skeleton` to `palantirnet/PROJECTNAME`
-  * Update the `description` with a brief description of your project.
-  * Update the `license` property based on how your work will be licensed
-  * Update the lock file so composer doesn't complain:
+## Additional Documentation
 
-  ```
-    composer update --lock
-  ```
+Project-specific:
 
-### Run the installers
+* [Technical Approach](docs/technical_approach.md)
 
-Go into your new project directory and run the script from `palantirnet/the-vagrant` to set up a Vagrant environment:
+General:
 
-  ```
-  cd PROJECTNAME
-  vendor/bin/the-vagrant-installer
-  ```
-
-From inside the VM, run the script from `palantirnet/the-build` to set up a base Drupal installation:
-
-  ```
-  vagrant up
-  vagrant ssh
-  vendor/bin/the-build-installer
-  ```
-
-### Commit your work to git
-
-Initialize a git repository and commit your work to the `develop` branch:
-
-```
-git init
-git checkout -b develop
-git commit --allow-empty -m "Initial commit."
-git add --all
-git commit -m "Add the skeleton."
-```
-
-Create an empty repository on [GitHub](https://github.com/) for your work. Then, push your work up to the repository:
-
-```
-git remote add origin git@github.com:palantirnet/PROJECTNAME.git
-git push -u origin develop
-```
-
-### Manage your Vagrant VM
-
-* Start or wake up your Vagrant VM: `vagrant up`
-* Log in: `vagrant ssh`
-* Log out (just like you would from any other ssh session): `exit`
-* Shut down the VM: `vagrant halt`
-* Check whether your VM is up or not: `vagrant status`
-* More information about this Vagrant setup is available at [palantirnet/the-vagrant](https://github.com/palantirnet/the-vagrant)
-* See also the [official Vagrant documentation](https://www.vagrantup.com/docs/index.html)
-
-### Install Drupal from the command line
-
-When using [drush](https://www.drush.org/) or [phing](https://www.phing.info/) to manage your Drupal site, you will need to log into the vagrant box (`vagrant ssh`).
-
-If you've run `vendor/bin/the-build-installer` from within the VM, Drupal will be installed and the initial config exported to `config/sites/default/`.
-
-You can use the phing scripts provided by `palantirnet/the-build` to reinstall the site from config at any time:
-
-```
-vendor/bin/phing install
-```
-
-Or, you can use drush directly:
-
-```
-drush site-install --existing-config
-```
-
-### Manage your configuration in code
-
-In Drupal 8 development, all (or most) Drupal configuration should be exported and treated as part of the codebase. On top of this core process, we use the [config_installer profile](https://www.drupal.org/project/config_installer) to allow us to use the exported configuration as the basis for a repeatable, automation-friendly build and install process. We also use [config_split](https://www.drupal.org/project/config_split) to manage environment-specific configuration.
-
-1. Log into Drupal in your browser and do some basic config customizations:
-
-  * Set the site timezone
-  * Disable per-user timezones
-  * Disable user account creation
-  * Remove unnecessary content types
-  * Set the admin email address (your VM will trap all emails)
-  * Turn the Cron interval down to "never"
-  * Uninstall unnecessary modules (e.g. Search, History, Comment)
-2. Export your config:
-
-  ```
-  drush cex -y
-  ```
-
-3. You should have a ton of new `*.yml` files in `config/sites/default/`. Add them, and this config change, to git:
-
-  ```
-  git add config/
-  git ci -m "Initial Drupal configuration."
-  git push
-  ```
-5. Reinstall your site and verify that your config is ready to go:
-
-  ```
-  vendor/bin/phing install
-  ```
-
-## More information
-
-* Site build and install process: [palantirnet/the-build](https://github.com/palantirnet/the-build)
-* Development environment setup: [palantirnet/the-vagrant](https://github.com/palantirnet/the-vagrant)
+* [Drupal Development](docs/general/drupal_development.md)
+* [Styleguide Development](docs/general/styleguide_development.md)
 
 ----
-Copyright 2016, 2017, 2018, 2019 Palantir.net, Inc.
+Copyright 2020 Palantir.net, Inc.
