@@ -1,0 +1,14 @@
+{
+    "name": "palantirnet/drupal-skeleton",
+    "description": "Drupal 7 environment build for University of Michigan Ford School.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Palantir.net",
+            "email": "info@palantir.net"
+        }
+    ],
+    "require-dev": {
+        "drush/drush": "8.*"
+    }
+}
