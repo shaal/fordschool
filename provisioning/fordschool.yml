@@ -15,4 +15,5 @@
     - { role: fordschool-d7 }
     - { role: solr }
     - { role: drupal-check }
+    - { role: drush }
     - { role: gulp }
