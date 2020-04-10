@@ -67,21 +67,22 @@
   <!-- Target: load-d7-database -->
   <target name="load-d7-database" description="Load the Drupal 7 database.">
 
-    <property name="db.load.export_prefix" value="artifacts/database/d7/drupal_7_prod"/>
-    <property name="db.load.mysql_command" value="mysql -uroot -proot fordschool_drupal7"/>
+    <property name="db.load.export_prefix" value="${drupal7.assets.database.file}"/>
+    <property name="db.load.mysql_command" value="mysql -u${drupal7.database.user} -p${drupal7.database.password} ${drupal7.database.name}"/>
 
-    <exec dir="${build.dir}" command="ls ${db.load.export_prefix}.*.gz | tail -1" outputProperty="db.load.file"/>
+    <exec dir="${drupal7.assets.database.path}" command="ls ${db.load.export_prefix}.sql.gz | tail -1"
+          outputProperty="db.load.file"/>
 
     <if>
       <equals arg1="${load.db}" arg2=""/>
       <then>
-        <echo>Missing database export at '${db.load.export_prefix}.mysql'
+        <echo>Missing database export at '${db.load.export_prefix}.sql.gz'
 
           Please download a database export to:
-          artifacts/database/d7/drupal_7_prod.mysql
+          ${drupal7.assets.database}
 
           Alternatively, you can specify the export file prefix; for example:
-          vendor/bin/phing load-d7-database -Ddb.load.export_prefix=artifacts/database/d7/drupal_7_prod.mysql
+          vendor/bin/phing load-d7-database -Ddb.load.export_prefix=${drupal7.assets.database}/drupal_7_prod.sql
 
         </echo>
         <fail message="Missing database export file."/>
@@ -89,14 +90,14 @@
     </if>
 
     <echo>Loading the `${db.load.file}` file to Drupal 7 database `fordschool_drupal7`...</echo>
-    <exec dir="${build.dir}" command="gunzip -c ${db.load.file} | ${db.load.mysql_command}" checkreturn="true"
+    <exec dir="${drupal7.assets.database.path}" command="gunzip -c ${db.load.file} | ${db.load.mysql_command}"
+          checkreturn="true"
           logoutput="true"/>
 
-    <echo>Reset the admin password so it's easy to log in.</echo>
-    <drush command="user-password" root="${build.dir}/artifacts/drupal7-site" uri="http://d7.fordschool.local">
-      <param>admin</param>
-      <option name="password" value="admin"/>
-    </drush>
+    <!--    Reset admin password to admin-->
+
+    <echo>Reset the Drupal 7 admin user password to "admin", so it's easy to log in.</echo>
+    <exec dir="${drupal7.build.dir}" command="drush upwd admin --password='admin'" checkreturn="true" logoutput="true"/>
   </target>
 
   <!-- Target: install

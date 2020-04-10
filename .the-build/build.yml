@@ -12,6 +12,19 @@
 build:
   host: other
 
+drupal7:
+  build:
+    dir: "/var/www/d7.fordschool.local"
+  assets:
+    database:
+      path: "/var/www/fordschool.local/web7/assets/database"
+      file: "drupal_7_prod"
+    files: "/var/www/fordschool.local/web7/assets/files"
+  database:
+    name: "fordschool_drupal7"
+    user: "root"
+    password: "root"
+
 drupal:
   root: "web"
 
