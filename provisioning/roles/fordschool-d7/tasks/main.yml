@@ -1,7 +1,18 @@
 ---
-- name: Create database for Drupal 7 site
+- name: Create fordschool_drupal7 database for Drupal 7 site
   mysql_db:
     name: fordschool_drupal7
+    state: present
+  tags: fordschool-d7
+
+- name: Add privs to "drupal" user for "fordschool_drupal7" databases
+  mysql_user:
+    append_privs: yes
+    host: '%'
+    login_password: root
+    login_user: root
+    name: drupal
+    priv: 'fordschool_drupal7.*:ALL'
     state: present
   tags: fordschool-d7
 
