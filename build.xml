@@ -68,7 +68,8 @@
   <target name="load-d7-database" description="Load the Drupal 7 database.">
 
     <property name="db.load.export_prefix" value="${drupal7.assets.database.file}"/>
-    <property name="db.load.mysql_command" value="mysql -u${drupal7.database.user} -p${drupal7.database.password} ${drupal7.database.name}"/>
+    <property name="db.load.mysql_command"
+              value="mysql -u${drupal7.database.user} -p${drupal7.database.password} ${drupal7.database.name}"/>
 
     <exec dir="${drupal7.assets.database.path}" command="ls ${db.load.export_prefix}.sql.gz | tail -1"
           outputProperty="db.load.file"/>
@@ -94,7 +95,19 @@
           checkreturn="true"
           logoutput="true"/>
 
-    <!--    Reset admin password to admin-->
+    <!--    Not using <drush></drush> below because of different versions of Drush installed, to support Drupal 7 and Drupal 8 sites.-->
+
+    <!--    Disables Varnish module. -->
+
+    <echo>Disable Varnish module.</echo>
+    <exec dir="${drupal7.build.dir}" command="drush dis varnish -y" checkreturn="true" logoutput="true"/>
+
+    <!--    Reset admin password to admin. -->
+
+    <echo>Disable CoSign and Mcommunity modules, to disable Ford School LDAP syncing.</echo>
+    <exec dir="${drupal7.build.dir}" command="drush dis mcommunity cosign -y" checkreturn="true" logoutput="true"/>
+
+    <!--    Reset admin password to admin. -->
 
     <echo>Reset the Drupal 7 admin user password to "admin", so it's easy to log in.</echo>
     <exec dir="${drupal7.build.dir}" command="drush upwd admin --password='admin'" checkreturn="true" logoutput="true"/>
