@@ -34,7 +34,7 @@ If you update Vagrant, you may need to update your vagrant plugins with `vagrant
 ## Getting Started
 
 1. Clone the project from github: `git clone https://github.com/palantirnet/fordschool.git`
-2. (*Drupal 7, optional*) Download Drupal 7 assets such as database copy and files from shared Box space.
+2. (*Drupal 7, optional*) Download Drupal 7 assets such as database copy and files from shared Box space. Link to [Box](https://app.box.com/folder/110397589252).
   - Place your compressed db copy in the `web7/assets/database` directory (`drupal_7_prod.sql.gz`).
   - Download the `files.zip` and uncompress the zip file. Copy the `files` directory to the `site/default` directory. Your files directory path should look like this:
 
