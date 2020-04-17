@@ -1,2 +1,4 @@
 local:
-  uri: 'https://fordschool.local'
+  uri: 'http://fordschool.local'
+  root: '/var/www/fordschool.local'
+

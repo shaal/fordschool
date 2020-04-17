@@ -50,8 +50,8 @@ Patches from the Drupal.org issue queues should be applied using composer using 
 ### Config Split
 
 This project uses [config_split](https://www.drupal.org/project/config_split) to set different configuration for different environments. For example, by default, devel is enabled for the local development environment.
- 
-Existing splits are defined by a YML file at `config/sites/default/config_split.config_split.<environment>.yml`, and the environment-specific configuration files exist inside the environment split directory (`config/config_split/<environment>`). 
+
+Existing splits are defined by a YML file at `config/sites/default/config_split.config_split.<environment>.yml`, and the environment-specific configuration files exist inside the environment split directory (`config/config_split/<environment>`).
 
 #### Exporting shared configuration for all environments
 
@@ -60,7 +60,7 @@ Existing splits are defined by a YML file at `config/sites/default/config_split.
 
 #### Exporting environment-specific config
 
-1. If you're exporting configuration for an environment other than development, you'll need to enable the split for that environment locally.  
+1. If you're exporting configuration for an environment other than development, you'll need to enable the split for that environment locally.
     1. See your `settings.php` file around line #30, replace "development" with the environment your configuring (either "staging" or "production").
     1. Run `drush cr` then `drush cim -y` to get a clean environment.
     1. You should now notice that your local development modules are disabled, and any other environment-specific modules (i.e. purge) are now enabled.
@@ -83,7 +83,7 @@ Existing splits are defined by a YML file at `config/sites/default/config_split.
     1. Once you have build your site from your current branch's configuration, run `drush cim -y` to import the development-only configuration
 * Building from production data
     1. Once you have built your site, run `drush cim -y` to import the shared configuration from your current branch
-    1. Run `drush cim -y` a second time to import the development-only configuration 
+    1. Run `drush cim -y` a second time to import the development-only configuration
 
 ### Setting specific config variables
 
@@ -106,4 +106,4 @@ This project uses Behat to test Drupal; it also provides some PHP linting tools.
 * The PHP code review: `phing code-review`
 
 ----
-Copyright 2017 Palantir.net, Inc.
+Copyright 2020 Palantir.net, Inc.

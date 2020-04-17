@@ -12,14 +12,14 @@ end
 # tunables
 project     = 'fordschool'
 hostname    = "#{project}.local"
-extra_hostnames = []
+extra_hostnames = ["d7.#{project}.local"]
 
 ansible_solr_enabled = false
 ansible_https_enabled = true
 ansible_node_version = 8
 ansible_project_web_root = "web"
 ansible_timezone = "America/Chicago"
-ansible_system_packages = []
+ansible_system_packages = ["python-mysqldb"]
 ansible_custom_playbook = ""
 # end tunables
 

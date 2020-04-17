@@ -1,0 +1,99 @@
+---
+- name: Create fordschool_drupal7 database for Drupal 7 site
+  mysql_db:
+    name: fordschool_drupal7
+    state: present
+  tags: fordschool-d7
+
+- name: Add privs to "drupal" user for "fordschool_drupal7" databases
+  mysql_user:
+    append_privs: yes
+    host: '%'
+    login_password: root
+    login_user: root
+    name: drupal
+    priv: 'fordschool_drupal7.*:ALL'
+    state: present
+  tags: fordschool-d7
+
+- name: Decrypt variables file
+  include_vars: vars/vault.yml
+  register: vault_decryption
+  ignore_errors: false
+  tags: fordschool-d7
+
+- block:
+  - name: Write private key
+    copy:
+      dest: /home/{{ ansible_user_id }}/.ssh/id_rsa.github-fordschool
+      content: "{{ vault_private_key }}"
+      mode: 0600
+    no_log: true
+
+  - name: Create 'docroot' directory for Ford School Drupal 7 site
+    file:
+      path: "/var/www/{{ hostname }}/web7/docroot"
+      state: directory
+
+  - name: Clone Ford School Drupal 7 site
+    git:
+      repo: git@github.com:palantirnet/fordschool-d7.git
+      dest: /var/www/{{ hostname }}/web7/docroot
+      accept_hostkey: yes
+      force: yes
+      recursive: no
+      key_file: /home/{{ ansible_user_id }}/.ssh/id_rsa.github-fordschool
+
+  - name: Run Composer install in 'web7' directory
+    composer:
+      working_dir: /var/www/{{ hostname }}/web7
+      command: install
+      no-dev: no
+
+  - name: Set permissions on 'default' directory
+    file:
+      path: "/var/www/{{ hostname }}/web7/docroot/sites/default"
+      state: directory
+      mode: 0755
+
+  - name: Create the Ford School Drupal 7 settings.php
+    template:
+      src: settings.php
+      dest: /var/www/{{ hostname }}/web7/docroot/sites/default/settings.php
+
+  - name: Create 'files' directory
+    file:
+      path: "/var/www/{{ hostname }}/web7/docroot/sites/default/files"
+      state: directory
+
+  - name: Create 'private' directory
+    file:
+      path: "/var/www/{{ hostname }}/web7/docroot/sites/default/private"
+      state: directory
+
+  - name: Link Ford School Drupal 7 site
+    become: true
+    file:
+      src: /var/www/{{ hostname }}/web7/docroot
+      dest: /var/www/d7.{{ hostname }}
+      state: link
+
+  - name: Install Apache vhost for Drupal 7 site
+    become: true
+    template: src=apache-vhost.conf dest=/etc/apache2/sites-available/d7.{{ hostname }}.conf
+
+  - name: Stat d7.{{ hostname }} vhost conf
+    stat: path=/etc/apache2/sites-enabled/d7.{{ hostname }}.conf
+    register: web7_vhost_exists
+
+  - name: Enable d7.{{ hostname }} vhost
+    become: true
+    shell: /usr/sbin/a2ensite d7.{{ hostname }}
+    when: web7_vhost_exists.stat.exists == False
+
+  - name: Restart Apache
+    become: true
+    service: name=apache2 state=restarted
+
+  when: vault_decryption is success
+  tags: fordschool-d7

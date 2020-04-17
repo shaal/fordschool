@@ -6,16 +6,17 @@
     project_web_root: web
     solr_enabled: false
     https_enabled: false
-    system_packages: []
+    system_packages: ["python-mysqldb"]
   roles:
     - { role: common }
     - { role: php }
     - { role: vhost }
-    - { role: https }
+    - { role: fordschool-d7 }
     - { role: solr }
     - { role: drupal-check }
+    - { role: drush }
     - { role: gulp }
     - { role: elnebuloso.nvm,
         nvm_user: "vagrant",
         become: true,
-      }
+    }

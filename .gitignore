@@ -34,3 +34,9 @@
 # Ignore virtual environment and artifacts
 .vagrant/
 /artifacts/
+
+# Ignore Drupal 7 local environment setup, assets
+/web7/assets/database/
+/web7/assets/files/
+/web7/vendor/
+/web7/docroot/

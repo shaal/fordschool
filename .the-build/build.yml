@@ -12,6 +12,19 @@
 build:
   host: other
 
+drupal7:
+  build:
+    dir: "/var/www/d7.fordschool.local"
+  assets:
+    database:
+      path: "/var/www/fordschool.local/web7/assets/database"
+      file: "drupal_7_prod"
+    files: "/var/www/fordschool.local/web7/assets/files"
+  database:
+    name: "fordschool_drupal7"
+    user: "root"
+    password: "root"
+
 drupal:
   root: "web"
 
@@ -26,7 +39,7 @@ drupal:
 
       # REQUIRED: Your site's URI; the default should be the URI of your local
       # development environment.
-      uri: "https://fordschool.local"
+      uri: "http://fordschool.local"
 
       # OPTIONAL: Drupal hash salt defaults to "temporary".
       hash_salt: "c9004d9ec4bfccb0b5da00097e27ead0bea3573b5e55008d7ad56e841d0feae5"
