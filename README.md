@@ -34,32 +34,37 @@ If you update Vagrant, you may need to update your vagrant plugins with `vagrant
 ## Getting Started
 
 1. Clone the project from github: `git clone https://github.com/palantirnet/fordschool.git`
-2. (*Drupal 7, optional*) Download Drupal 7 assets such as database copy and files from shared Box space. Link to [Box](https://app.box.com/folder/110397589252).
-  - Place your compressed db copy in the `web7/assets/database` directory (`drupal_7_prod.sql.gz`).
-  - Download the `files.zip` and uncompress the zip file. Copy the `files` directory to the `site/default` directory. Your files directory path should look like this:
+2. From inside the project root, run to install dependencies:
 
-  	```
-  	web7/docroot/sites/default/files
-  	```
-
-1. From inside the project root, run:
-
-  ```
-    vagrant up
-  ```
+    ```
+       composer install
+    ```
+    then run command below to boot your virtual machine:
+      ```
+        vagrant up
+      ```
 3. You will be prompted for the administration password on your host machine and a Vault password. You can find the vault password in 1Password, under Clients category (*University of Michigan Ford School Ansible Vault*).
+
+4. (*Drupal 7, optional*) Download Drupal 7 assets such as database copy and files from shared Box space. Link to [Box](https://app.box.com/folder/110397589252).
+    - Place your compressed db copy in the `web7/assets/database` directory (`drupal_7_prod.sql.gz`).
+    - Download the `files.zip` and uncompress the zip file. Copy the `files` directory to the `site/default` directory. Your files directory path should look like this:
+
+  	    ```
+  	    web7/docroot/sites/default/files
+  	    ```
+
 5. Log in to the virtual machine (the VM): `vagrant ssh`
 6. (*Drupal 7, optional*) Navigate to the root directory in the VM and load Drupal 7 database to import and prepare Drupal 7 database:
 
- ```
- cd /var/www/fordschool.local
- phing load-d7-database
- ```
+     ```
+     cd /var/www/fordschool.local
+     phing load-d7-database
+     ```
 
 6. From within the VM, build and install the Drupal 8 site: `phing install`
 7. Visit your site at:
- - [https://fordschool.local](https://fordschool.local) for Drupal 8 site
- - [https://d7.fordschool.local](https://d7.fordschool.local) for Drupal 7 site
+ - [http://fordschool.local](http://fordschool.local) for Drupal 8 site
+ - [http://d7.fordschool.local](http://d7.fordschool.local) for Drupal 7 site
 
  Both Drupal 7 and Drupal 8 sites will use `admin` \ `admin` as the username and password.
 
