@@ -1,0 +1,44 @@
+#!/bin/sh
+
+role=ansible-role-nvm
+
+while [ $# -gt 0 ]; do
+    arg=$1
+
+    case $arg in
+        start)
+            docker-compose up --build --force-recreate -d
+        ;;
+        check)
+            docker-compose exec ubuntu14 ansible-playbook -i 'localhost,' -c local /etc/ansible/roles/$role/tests/test.yml --syntax-check
+            docker-compose exec ubuntu16 ansible-playbook -i 'localhost,' -c local /etc/ansible/roles/$role/tests/test.yml --syntax-check
+        ;;
+        install)
+            docker-compose exec ubuntu14 ansible-playbook -i 'localhost,' -c local /etc/ansible/roles/$role/tests/test.yml
+            docker-compose exec ubuntu16 ansible-playbook -i 'localhost,' -c local /etc/ansible/roles/$role/tests/test.yml
+        ;;
+        verify)
+            clear
+
+            echo "ubuntu14"
+            docker-compose exec --user root ubuntu14 nvm --version
+            echo ""
+
+            echo "ubuntu16"
+            docker-compose exec --user root ubuntu16 nvm --version
+            echo ""
+
+            echo "ubuntu14"
+            docker-compose exec --user foo ubuntu14 nvm --version
+            echo ""
+
+            echo "ubuntu16"
+            docker-compose exec --user foo ubuntu16 nvm --version
+            echo ""
+        ;;
+        stop)
+            docker-compose down
+        ;;
+    esac
+    shift
+done

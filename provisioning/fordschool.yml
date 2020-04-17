@@ -17,3 +17,7 @@
     - { role: drupal-check }
     - { role: drush }
     - { role: gulp }
+    - { role: elnebuloso.nvm,
+        nvm_user: "vagrant",
+        become: true,
+    }
