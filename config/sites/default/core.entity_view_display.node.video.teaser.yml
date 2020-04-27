@@ -1,30 +1,30 @@
-uuid: d6317c25-527b-45aa-b955-f04da6c1039c
+uuid: 5c090700-5f8f-46b0-936a-e0adf41fdd3d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.video.body
+    - node.type.video
   module:
     - text
     - user
-_core:
-  default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
-id: node.page.teaser
+id: node.video.teaser
 targetEntityType: node
-bundle: page
+bundle: video
 mode: teaser
 content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
-    region: content
+    weight: 101
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
-    weight: 101
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden: {  }

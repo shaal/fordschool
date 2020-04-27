@@ -1,0 +1,28 @@
+uuid: ff903a68-586c-4765-bd47-c34be10a7ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video.body
+    - node.type.video
+  module:
+    - text
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

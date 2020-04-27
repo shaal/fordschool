@@ -1,0 +1,18 @@
+uuid: adaa7978-7520-48a7-b8b5-27fa151e9f13
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Homepage
+type: homepage
+description: "Use this content type to display a customized display of the homepage content and components.\r\n"
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

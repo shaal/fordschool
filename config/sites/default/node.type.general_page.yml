@@ -1,0 +1,18 @@
+uuid: 6df960b7-9613-4d80-a57f-ebfc4330f9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'General Page'
+type: general_page
+description: 'Use this content type to publish evergreen content, such as about us, or contact pages.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,30 +1,28 @@
-uuid: 4ae44533-9090-40f9-8569-149569eefc14
+uuid: 9c81af39-0728-46e6-b1f4-c62b4ab1d10a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.map_graduate.body
+    - node.type.map_graduate
   module:
     - path
     - text
-_core:
-  default_config_hash: AD_lefuYmjsKeH3OQApsyP_nLj6ZnGaALznLQSQ0Z_o
-id: node.page.default
+id: node.map_graduate.default
 targetEntityType: node
-bundle: page
+bundle: map_graduate
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
-    region: content
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -69,11 +67,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
+    region: content
     third_party_settings: {  }
 hidden: {  }

@@ -1,0 +1,30 @@
+uuid: 8a31def0-1e5b-48ec-9964-f261e1884bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.room_request.body
+    - node.type.room_request
+  module:
+    - text
+    - user
+id: node.room_request.teaser
+targetEntityType: node
+bundle: room_request
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

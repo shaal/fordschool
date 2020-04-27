@@ -1,18 +1,16 @@
-uuid: c55aa1e6-3cf9-4c4d-bdc7-3dbd37668f6f
+uuid: af18dbdb-6797-4341-b91f-25a5b30da6c0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.map_graduate
   module:
     - text
-_core:
-  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
-id: node.article.body
+id: node.map_graduate.body
 field_name: body
 entity_type: node
-bundle: article
+bundle: map_graduate
 label: Body
 description: ''
 required: false

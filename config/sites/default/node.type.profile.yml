@@ -1,0 +1,18 @@
+uuid: b08397b5-2605-4b30-906f-3ae21ff16c15
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Profile
+type: profile
+description: 'Use this content type to create a faculty, staff, or student profiles.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
