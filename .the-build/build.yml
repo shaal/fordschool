@@ -69,7 +69,25 @@ drupal-check:
   # Location of the drupal-check script. This script is currently installed globally
   # on the-vagrant because of repository-level composer conflicts.
   bin: "~/bin/drupal-check"
+  directories:
+    - "${drupal.root}/profiles/custom/"
+    - "${drupal.root}/themes/custom/"
+    - "${drupal.root}/modules/custom/"
 
+# Configuration for using PHP_CodeSniffer to review code according to the Drupal coding
+# standards.
+#
+# @see https://www.drupal.org/docs/develop/standards
+# @see https://github.com/squizlabs/PHP_CodeSniffer
+# @see https://www.drupal.org/project/coder
+#
+# These values are used in the defaults/build.xml template:
+#   $> phpcs --standard=${phpcs.standard} --ignore=${phpcs.ignore} ${phpcs.directories}
+phpcs:
+  # Comma-separated list of patterns for files and directories to exclude from the
+  # PHP_CodeSniffer review.
+  # Coder 8.3.7 now ignores *.md by default but checks *.js, which we should ignore for now.
+  ignore: "*.js"
 
 # To build an artifact from your code, add the URL to your artifact git repository.
 # @see https://github.com/palantirnet/the-build/blob/release-2.0/defaults.yml
