@@ -1,0 +1,28 @@
+uuid: ec6a6675-6323-4cfd-8a7a-033063362253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.map_graduate.body
+    - node.type.map_graduate
+  module:
+    - text
+    - user
+id: node.map_graduate.default
+targetEntityType: node
+bundle: map_graduate
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

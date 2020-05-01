@@ -1,0 +1,23 @@
+uuid: af18dbdb-6797-4341-b91f-25a5b30da6c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.map_graduate
+  module:
+    - text
+id: node.map_graduate.body
+field_name: body
+entity_type: node
+bundle: map_graduate
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

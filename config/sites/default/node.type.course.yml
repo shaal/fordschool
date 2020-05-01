@@ -1,0 +1,18 @@
+uuid: 016a541c-05e3-4d0a-8f74-52557a0be2de
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Course
+type: course
+description: 'This content type will allow you to create a new course for the course listings.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

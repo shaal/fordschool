@@ -1,0 +1,28 @@
+uuid: 599be9ce-284d-472c-81e2-fb936f2deac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.room_request.body
+    - node.type.room_request
+  module:
+    - text
+    - user
+id: node.room_request.default
+targetEntityType: node
+bundle: room_request
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: 8051e473-9d7d-43d7-b567-8c8effd666c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Video
+type: video
+description: "Post videos for news and/or events, or may stand-alone and be displayed in listing pages, sidebars.\r\n"
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

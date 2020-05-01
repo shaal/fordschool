@@ -1,0 +1,18 @@
+uuid: b2134ede-cae7-4d44-9928-96370599fa22
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Room Request'
+type: room_request
+description: "Use this content type to provide detailed descriptions and images for room advertisement.\r\n"
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

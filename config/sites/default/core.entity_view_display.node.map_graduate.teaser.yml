@@ -1,0 +1,30 @@
+uuid: a1cf4f86-c565-453e-8b47-4ec0b8e48c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.map_graduate.body
+    - node.type.map_graduate
+  module:
+    - text
+    - user
+id: node.map_graduate.teaser
+targetEntityType: node
+bundle: map_graduate
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
