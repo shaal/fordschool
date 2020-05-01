@@ -4,8 +4,20 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_featured_image
+    - field.field.node.event.field_location
+    - field.field.node.event.field_page_lead
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_related_audio
+    - field.field.node.event.field_related_video
+    - field.field.node.event.field_speaker
+    - field.field.node.event.field_subheading
+    - field.field.node.event.field_teaser_image
     - node.type.event
   module:
+    - link
     - text
     - user
 id: node.event.default
@@ -18,6 +30,98 @@ content:
     type: text_default
     weight: 101
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_contact:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_page_lead:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_registration_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_related_audio:
+    type: entity_reference_entity_view
+    weight: 110
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_related_video:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_speaker:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subheading:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 112
+    label: above
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     region: content
   links:
