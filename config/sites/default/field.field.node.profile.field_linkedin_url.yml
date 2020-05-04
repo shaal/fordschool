@@ -1,0 +1,23 @@
+uuid: d9c90c4c-5283-4c09-89ab-0448ab506b4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linkedin_url
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_linkedin_url
+field_name: field_linkedin_url
+entity_type: node
+bundle: profile
+label: 'LinkedIn URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

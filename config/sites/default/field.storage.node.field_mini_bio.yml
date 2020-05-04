@@ -1,0 +1,19 @@
+uuid: 3c30534d-8b74-49ee-a6c1-87cee8a4f02d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_mini_bio
+field_name: field_mini_bio
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

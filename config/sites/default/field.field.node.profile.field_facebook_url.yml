@@ -1,0 +1,23 @@
+uuid: 6afc1e54-60d4-4a53-aab6-4cbebda656b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook_url
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_facebook_url
+field_name: field_facebook_url
+entity_type: node
+bundle: profile
+label: 'Facebook URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
