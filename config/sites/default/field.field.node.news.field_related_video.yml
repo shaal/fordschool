@@ -1,0 +1,28 @@
+uuid: 303a34b6-c2d4-4292-bda1-c7bb0225eb9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_video
+    - node.type.news
+    - node.type.video
+id: node.news.field_related_video
+field_name: field_related_video
+entity_type: node
+bundle: news
+label: 'Related Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 64291b0c-76ad-48ba-b631-2610498cd6ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_lead
+    - node.type.news
+id: node.news.field_page_lead
+field_name: field_page_lead
+entity_type: node
+bundle: news
+label: 'Page Lead'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
