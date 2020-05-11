@@ -1,0 +1,28 @@
+uuid: 94f505ad-eb5b-40ab-862e-1917fc39cb66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instructor
+    - node.type.course
+    - node.type.profile
+id: node.course.field_instructor
+field_name: field_instructor
+entity_type: node
+bundle: course
+label: Instructor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
