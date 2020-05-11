@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_contact
+    - field.field.node.news.field_date
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_impact_story_degree
     - field.field.node.news.field_impact_story_headline
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.news.field_teaser_text
     - node.type.news
   module:
+    - datetime
     - text
     - user
 id: node.news.default
@@ -36,6 +38,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_date:
+    weight: 117
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_featured_image:
     weight: 112

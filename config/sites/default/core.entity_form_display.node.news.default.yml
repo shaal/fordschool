@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_contact
+    - field.field.node.news.field_date
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_impact_story_degree
     - field.field.node.news.field_impact_story_headline
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.news.field_teaser_text
     - node.type.news
   module:
+    - datetime
     - field_group
     - path
     - text
@@ -115,6 +117,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_date:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_featured_image:
     weight: 26
