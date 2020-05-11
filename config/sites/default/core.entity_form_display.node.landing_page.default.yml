@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_contact
+    - field.field.node.landing_page.field_related_links
     - node.type.landing_page
   module:
+    - link
     - path
     - text
 id: node.landing_page.default
@@ -29,6 +32,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_contact:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_related_links:
+    weight: 123
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   path:
     type: path
     weight: 30

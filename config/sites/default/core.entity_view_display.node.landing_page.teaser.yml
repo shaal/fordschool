@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_contact
+    - field.field.node.landing_page.field_related_links
     - node.type.landing_page
   module:
     - text
@@ -27,4 +29,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_contact: true
+  field_related_links: true

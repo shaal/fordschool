@@ -1,0 +1,28 @@
+uuid: ec5888d8-a00d-40a2-afd3-de7926ea8de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.landing_page
+    - node.type.profile
+id: node.landing_page.field_contact
+field_name: field_contact
+entity_type: node
+bundle: landing_page
+label: Contact
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
