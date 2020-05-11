@@ -5,9 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
+    - field.field.node.news.field_contact
+    - field.field.node.news.field_featured_image
     - field.field.node.news.field_impact_story_degree
     - field.field.node.news.field_impact_story_headline
     - field.field.node.news.field_impact_story_name
+    - field.field.node.news.field_page_lead
+    - field.field.node.news.field_related_video
+    - field.field.node.news.field_teaser_image
     - field.field.node.news.field_teaser_text
     - node.type.news
   module:
@@ -32,7 +37,12 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_contact: true
+  field_featured_image: true
   field_impact_story_degree: true
   field_impact_story_headline: true
   field_impact_story_name: true
+  field_page_lead: true
+  field_related_video: true
+  field_teaser_image: true
   field_teaser_text: true
