@@ -1,0 +1,8 @@
+uuid: f354241b-3dc1-439d-9061-3e4227385bd7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event type'
+vid: event_type
+description: 'Used by events to indicated type of event.'
+weight: 0

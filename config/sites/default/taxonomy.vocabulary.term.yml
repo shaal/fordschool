@@ -1,0 +1,8 @@
+uuid: 5dd39ee2-ef37-4de0-ad41-ec47bbd8a173
+langcode: en
+status: true
+dependencies: {  }
+name: Term
+vid: term
+description: 'The vocabulary is used on courses to indicate which term/semester the course is available'
+weight: 0
