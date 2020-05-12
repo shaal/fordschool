@@ -11,7 +11,7 @@ id: node.course.field_date
 field_name: field_date
 entity_type: node
 bundle: course
-label: Date
+label: 'Course Date'
 description: ''
 required: false
 translatable: false
