@@ -83,6 +83,17 @@ To work on the styleguide:
 
 * @todo TBA when styleguide is added to the repo.
 
+## Troubleshooting
+
+If `vagrant up` command fails with this following error:
+```
+TASK [common : Common | Update apt cache] **************************************
+fatal: [fordschool]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:GPG error: https://dl.yarnpkg.com/debian stable InRelease: The following signatures were invalid: KEYEXPIRED 1507181400
+```
+
+Try running `vagrant box update`.
+The last confirmed working version is palantir/drupalbox (virtualbox, 1.4.1)
+
 ### Drupal Development
 
 You can refresh/reset your local Drupal site at any time. SSH into your VM and then:
