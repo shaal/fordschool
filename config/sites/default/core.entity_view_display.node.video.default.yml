@@ -5,11 +5,16 @@ dependencies:
   config:
     - field.field.node.video.body
     - field.field.node.video.field_duration
+    - field.field.node.video.field_featured_image
+    - field.field.node.video.field_related_people
     - field.field.node.video.field_related_videos
+    - field.field.node.video.field_teaser_image
     - field.field.node.video.field_transcript_file
     - field.field.node.video.field_transcript_text
+    - field.field.node.video.field_video_date
     - node.type.video
   module:
+    - datetime
     - text
     - user
 id: node.video.default
@@ -33,8 +38,32 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_featured_image:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_people:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_related_videos:
     weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teaser_image:
+    weight: 108
     label: above
     settings:
       link: true
@@ -56,6 +85,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_video_date:
+    weight: 109
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100

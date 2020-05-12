@@ -6,9 +6,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.video.body
     - field.field.node.video.field_duration
+    - field.field.node.video.field_featured_image
+    - field.field.node.video.field_related_people
     - field.field.node.video.field_related_videos
+    - field.field.node.video.field_teaser_image
     - field.field.node.video.field_transcript_file
     - field.field.node.video.field_transcript_text
+    - field.field.node.video.field_video_date
     - node.type.video
   module:
     - text
@@ -33,6 +37,10 @@ content:
     region: content
 hidden:
   field_duration: true
+  field_featured_image: true
+  field_related_people: true
   field_related_videos: true
+  field_teaser_image: true
   field_transcript_file: true
   field_transcript_text: true
+  field_video_date: true
