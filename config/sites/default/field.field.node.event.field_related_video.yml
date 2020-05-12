@@ -1,0 +1,28 @@
+uuid: b1f8c9b3-820d-4b48-ad1f-81e45c6afd30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_video
+    - node.type.event
+    - node.type.video
+id: node.event.field_related_video
+field_name: field_related_video
+entity_type: node
+bundle: event
+label: 'Related Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

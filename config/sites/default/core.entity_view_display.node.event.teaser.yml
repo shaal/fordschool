@@ -5,6 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_featured_image
+    - field.field.node.event.field_location
+    - field.field.node.event.field_page_lead
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_related_audio
+    - field.field.node.event.field_related_people
+    - field.field.node.event.field_related_video
+    - field.field.node.event.field_speaker
+    - field.field.node.event.field_stream_links
+    - field.field.node.event.field_subheading
+    - field.field.node.event.field_teaser_image
+    - field.field.node.event.field_time
     - node.type.event
   module:
     - text
@@ -27,4 +41,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_address: true
+  field_contact: true
+  field_featured_image: true
+  field_location: true
+  field_page_lead: true
+  field_registration_link: true
+  field_related_audio: true
+  field_related_people: true
+  field_related_video: true
+  field_speaker: true
+  field_stream_links: true
+  field_subheading: true
+  field_teaser_image: true
+  field_time: true
