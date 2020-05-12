@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.video.body
+    - field.field.node.video.field_duration
+    - field.field.node.video.field_related_videos
+    - field.field.node.video.field_transcript_file
+    - field.field.node.video.field_transcript_text
     - node.type.video
   module:
     - text
@@ -27,4 +31,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_duration: true
+  field_related_videos: true
+  field_transcript_file: true
+  field_transcript_text: true
