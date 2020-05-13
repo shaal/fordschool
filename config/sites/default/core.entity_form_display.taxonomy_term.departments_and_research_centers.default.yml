@@ -9,7 +9,6 @@ dependencies:
     - field.field.taxonomy_term.departments_and_research_centers.field_image
     - field.field.taxonomy_term.departments_and_research_centers.field_logo
     - field.field.taxonomy_term.departments_and_research_centers.field_phone
-    - field.field.taxonomy_term.departments_and_research_centers.field_quick_link
     - taxonomy.vocabulary.departments_and_research_centers
   module:
     - link
@@ -73,14 +72,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_quick_link:
-    weight: 102
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   name:
     type: string_textfield
