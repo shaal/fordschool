@@ -1,0 +1,23 @@
+uuid: 3ad87577-1ab8-46ec-b985-de114dc7144f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_quick_link
+    - taxonomy.vocabulary.policy_topics
+  module:
+    - link
+id: taxonomy_term.policy_topics.field_quick_link
+field_name: field_quick_link
+entity_type: taxonomy_term
+bundle: policy_topics
+label: 'Quick Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
