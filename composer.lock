@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70d8507e2db1147c45c384f684fb35e7",
+    "content-hash": "c5c07b399a8b51d3510279c94d94f8f6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -648,6 +648,123 @@
             "time": "2019-06-08T11:03:04+00:00"
         },
         {
+            "name": "drupal-pattern-lab/add-attributes-twig-extension",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-pattern-lab/add-attributes-twig-extension.git",
+                "reference": "a86c5af2cd6b6996c41cd389df71683faa6701f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-pattern-lab/add-attributes-twig-extension/zipball/a86c5af2cd6b6996c41cd389df71683faa6701f5",
+                "reference": "a86c5af2cd6b6996c41cd389df71683faa6701f5",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Willhite",
+                    "email": "evan@fourkitchens.com"
+                },
+                {
+                    "name": "Jeff Tomlinson",
+                    "email": "jeff@fourkitchens.com"
+                }
+            ],
+            "description": "Twig function that allows addition of attributes that can be rendered in both Drupal and Pattern Lab",
+            "time": "2017-08-17T03:05:07+00:00"
+        },
+        {
+            "name": "drupal-pattern-lab/attach-library-twig-extension",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-pattern-lab/attach-library-twig-extension.git",
+                "reference": "f7ad0656495039a7718c0189cfc4ff1623b56dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-pattern-lab/attach-library-twig-extension/zipball/f7ad0656495039a7718c0189cfc4ff1623b56dfa",
+                "reference": "f7ad0656495039a7718c0189cfc4ff1623b56dfa",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Willhite",
+                    "email": "evan@fourkitchens.com"
+                }
+            ],
+            "description": "Twig function that lets Pattern Lab use a simple version of Drupal's attach_library function to add javascript files per component.",
+            "time": "2018-12-04T22:15:15+00:00"
+        },
+        {
+            "name": "drupal-pattern-lab/bem-twig-extension",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-pattern-lab/bem-twig-extension.git",
+                "reference": "c772316bb6121823dcae157abfd1c173441e121d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-pattern-lab/bem-twig-extension/zipball/c772316bb6121823dcae157abfd1c173441e121d",
+                "reference": "c772316bb6121823dcae157abfd1c173441e121d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Willhite",
+                    "email": "evan@fourkitchens.com"
+                },
+                {
+                    "name": "Jeff Tomlinson",
+                    "email": "jeff@fourkitchens.com"
+                }
+            ],
+            "description": "Twig function that inserts static classes into Pattern Lab and adds them to the Attributes object in Drupal",
+            "time": "2017-08-17T03:08:26+00:00"
+        },
+        {
+            "name": "drupal-pattern-lab/unified-twig-extensions",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-pattern-lab/unified-twig-extensions.git",
+                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-pattern-lab/unified-twig-extensions/zipball/862b9deccab544ca68e3aaaccc257d14acc9b1f6",
+                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Salem Ghoweri",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Share Pattern Lab's custom Twig extensions with Drupal 8.",
+            "time": "2017-08-08T19:57:42+00:00"
+        },
+        {
             "name": "drupal/admin_toolbar",
             "version": "2.2.0",
             "source": {
@@ -723,6 +840,57 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/components",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/components.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "72af8ff1ca842556ee4b95335595c24703acdb75"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1556870881",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
+            "homepage": "https://www.drupal.org/project/components",
+            "support": {
+                "source": "https://git.drupalcode.org/project/components"
             }
         },
         {
@@ -1434,9 +1602,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.1",
                     "datestamp": "1536675780",
@@ -1668,6 +1833,54 @@
                 "validator"
             ],
             "time": "2019-08-13T17:33:27+00:00"
+        },
+        {
+            "name": "fourkitchens/emulsify",
+            "version": "v3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fourkitchens/emulsify.git",
+                "reference": "82c50bfbfc0338b703a79df2364a22e549e066f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fourkitchens/emulsify/zipball/82c50bfbfc0338b703a79df2364a22e549e066f6",
+                "reference": "82c50bfbfc0338b703a79df2364a22e549e066f6",
+                "shasum": ""
+            },
+            "require": {
+                "drupal-pattern-lab/add-attributes-twig-extension": "^1.0",
+                "drupal-pattern-lab/attach-library-twig-extension": "^1.0",
+                "drupal-pattern-lab/bem-twig-extension": "^1.0",
+                "drupal-pattern-lab/unified-twig-extensions": "^0.1",
+                "drupal/components": "^1.0"
+            },
+            "type": "drupal-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Lewis",
+                    "email": "brian@fourkitchens.com"
+                },
+                {
+                    "name": "Chris Martin",
+                    "email": "chris.martin@fourkitchens.com"
+                },
+                {
+                    "name": "Evan Willhite",
+                    "email": "evan@fourkitchens.com"
+                },
+                {
+                    "name": "Randy Oest",
+                    "email": "randy@fourkitchens.com"
+                }
+            ],
+            "description": "Project template for Drupal 8 themes",
+            "homepage": "http://emulsify.info",
+            "time": "2018-12-15T04:46:36+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3278,6 +3491,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-27T09:26:54+00:00"
         },
         {
@@ -3828,6 +4055,20 @@
             "keywords": [
                 "debug",
                 "dump"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-02-24T13:10:00+00:00"
         },
@@ -4926,6 +5167,16 @@
                 "autoload",
                 "dependency",
                 "package"
+            ],
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-03-13T19:34:27+00:00"
         },
@@ -8297,6 +8548,20 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-04-19T20:35:10+00:00"
         },
         {
@@ -9524,6 +9789,20 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-01-01T11:03:25+00:00"
         },
         {
@@ -9924,6 +10203,20 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-21T08:01:47+00:00"
         },
         {
@@ -10110,5 +10403,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
