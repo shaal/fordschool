@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Policy Topics'
 vid: policy_topics
-description: ''
+description: 'This vocabulary is used to indicate degree relationships. It is used on profiles, courses, and map graduates.'
 weight: 0
