@@ -3,11 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.policy_topics.field_quick_link
     - field.field.taxonomy_term.policy_topics.field_research_department
     - taxonomy.vocabulary.policy_topics
   module:
-    - link
     - text
 id: taxonomy_term.policy_topics.default
 targetEntityType: taxonomy_term
@@ -21,18 +19,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_quick_link:
-    weight: 1
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_research_department:
     weight: 2
     label: above
