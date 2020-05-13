@@ -1,0 +1,19 @@
+uuid: 68cddb6b-404d-4aef-af21-674ba724d574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_email
+    - taxonomy.vocabulary.departments_and_research_centers
+id: taxonomy_term.departments_and_research_centers.field_email
+field_name: field_email
+entity_type: taxonomy_term
+bundle: departments_and_research_centers
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,23 @@
+uuid: 6e7fd684-16a6-48cb-bab4-498476cd2fa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone
+    - taxonomy.vocabulary.departments_and_research_centers
+id: taxonomy_term.departments_and_research_centers.field_phone
+field_name: field_phone
+entity_type: taxonomy_term
+bundle: departments_and_research_centers
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
