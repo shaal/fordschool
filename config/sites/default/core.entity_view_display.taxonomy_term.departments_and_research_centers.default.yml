@@ -50,7 +50,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: email_mailto
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -71,12 +71,11 @@ content:
     third_party_settings: {  }
     region: content
   field_phone:
-    weight: 4
+    weight: 8
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
     region: content
 hidden: {  }
