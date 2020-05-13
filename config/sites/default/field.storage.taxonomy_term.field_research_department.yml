@@ -1,0 +1,19 @@
+uuid: 9b3502d2-2884-42d4-b6bf-a6b0d1ccf21a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_research_department
+field_name: field_research_department
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
