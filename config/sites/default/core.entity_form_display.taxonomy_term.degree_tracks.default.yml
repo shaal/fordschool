@@ -1,0 +1,60 @@
+uuid: 33b9dcd0-63bf-4f17-a7e2-948ed279350b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.degree_tracks.field_abbreviation
+    - field.field.taxonomy_term.degree_tracks.field_degree_level
+    - taxonomy.vocabulary.degree_tracks
+  module:
+    - path
+    - text
+id: taxonomy_term.degree_tracks.default
+targetEntityType: taxonomy_term
+bundle: degree_tracks
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abbreviation:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_degree_level:
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }
