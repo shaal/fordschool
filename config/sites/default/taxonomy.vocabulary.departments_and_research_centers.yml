@@ -1,0 +1,8 @@
+uuid: 53f406e4-64e0-4f36-a714-99ee726c27fa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Departments and Research Centers'
+vid: departments_and_research_centers
+description: 'Used to indicate department and research center contact information, logos.'
+weight: 0
