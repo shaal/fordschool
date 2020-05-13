@@ -1,0 +1,8 @@
+uuid: 8291153f-9849-4545-9686-c6c1bab53a6e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Term Year'
+vid: term_year
+description: 'This vocabulary is used on courses to indicate which year the course is available.'
+weight: 0
