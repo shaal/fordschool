@@ -1,0 +1,21 @@
+uuid: d9de1212-fcbc-4be6-844a-def1efcdfcae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_degree_level
+    - taxonomy.vocabulary.degree_tracks
+  module:
+    - options
+id: taxonomy_term.degree_tracks.field_degree_level
+field_name: field_degree_level
+entity_type: taxonomy_term
+bundle: degree_tracks
+label: 'Degree Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
