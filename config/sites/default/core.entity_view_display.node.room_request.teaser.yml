@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.room_request.body
+    - field.field.node.room_request.field_360_room_embed
+    - field.field.node.room_request.field_av_features
     - field.field.node.room_request.field_calendar_link
     - field.field.node.room_request.field_capacity
     - field.field.node.room_request.field_floor_plan
@@ -14,27 +15,20 @@ dependencies:
     - field.field.node.room_request.field_scheduling
     - node.type.room_request
   module:
-    - text
     - user
 id: node.room_request.teaser
 targetEntityType: node
 bundle: room_request
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  field_360_room_embed: true
+  field_av_features: true
   field_calendar_link: true
   field_capacity: true
   field_floor_plan: true

@@ -3,7 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.room_request.body
+    - field.field.node.room_request.field_360_room_embed
+    - field.field.node.room_request.field_av_features
     - field.field.node.room_request.field_calendar_link
     - field.field.node.room_request.field_capacity
     - field.field.node.room_request.field_floor_plan
@@ -21,12 +22,19 @@ targetEntityType: node
 bundle: room_request
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
+  field_360_room_embed:
+    weight: 109
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
+  field_av_features:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_calendar_link:
     weight: 104
