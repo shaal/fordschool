@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.room_request.body
+    - field.field.node.room_request.field_calendar_link
+    - field.field.node.room_request.field_capacity
+    - field.field.node.room_request.field_floor_plan
+    - field.field.node.room_request.field_room_features
+    - field.field.node.room_request.field_room_location
+    - field.field.node.room_request.field_room_number
+    - field.field.node.room_request.field_scheduling
     - node.type.room_request
   module:
     - text
@@ -27,4 +34,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_calendar_link: true
+  field_capacity: true
+  field_floor_plan: true
+  field_room_features: true
+  field_room_location: true
+  field_room_number: true
+  field_scheduling: true
