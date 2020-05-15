@@ -1,0 +1,29 @@
+uuid: 830b2a4c-3506-4cba-bd3f-0169df78a469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_term
+    - node.type.course
+    - taxonomy.vocabulary.course_target
+id: node.course.field_promotion_term
+field_name: field_promotion_term
+entity_type: node
+bundle: course
+label: 'Promotion Term'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      course_target: course_target
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
