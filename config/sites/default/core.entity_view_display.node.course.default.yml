@@ -11,12 +11,20 @@ dependencies:
     - field.field.node.course.field_course_name
     - field.field.node.course.field_course_number
     - field.field.node.course.field_course_section
+    - field.field.node.course.field_course_year
     - field.field.node.course.field_credit_hours
     - field.field.node.course.field_date
+    - field.field.node.course.field_degree_track
     - field.field.node.course.field_instructor
+    - field.field.node.course.field_meets_reference
+    - field.field.node.course.field_policy_topics
+    - field.field.node.course.field_promotion_term
+    - field.field.node.course.field_research_centers
+    - field.field.node.course.field_semester
     - field.field.node.course.field_students
     - field.field.node.course.field_syllabus_file
     - field.field.node.course.field_syllabus_link
+    - field.field.node.course.field_tags
     - field.field.node.course.field_um_course_number
     - field.field.node.course.field_video
     - node.type.course
@@ -97,6 +105,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_course_year:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_credit_hours:
     weight: 112
     label: above
@@ -115,8 +131,56 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_degree_track:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_instructor:
     weight: 116
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meets_reference:
+    weight: 120
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_policy_topics:
+    weight: 122
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_promotion_term:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_research_centers:
+    weight: 123
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_semester:
+    weight: 118
     label: above
     settings:
       link: true
@@ -151,6 +215,14 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_tags:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_um_course_number:
     weight: 106
