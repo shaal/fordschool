@@ -1,0 +1,30 @@
+uuid: eb15b4b6-a7a4-404a-b1b1-1cb84c2c2cc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_degree_level
+field_name: field_degree_level
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Bachelor
+    -
+      value: '2'
+      label: Master
+    -
+      value: '3'
+      label: Doctoral
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
