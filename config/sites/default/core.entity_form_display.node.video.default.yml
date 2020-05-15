@@ -5,13 +5,18 @@ dependencies:
   config:
     - field.field.node.video.body
     - field.field.node.video.field_duration
+    - field.field.node.video.field_event_series
     - field.field.node.video.field_featured_image
+    - field.field.node.video.field_policy_topics
     - field.field.node.video.field_related_people
     - field.field.node.video.field_related_videos
+    - field.field.node.video.field_research_centers
+    - field.field.node.video.field_tags
     - field.field.node.video.field_teaser_image
     - field.field.node.video.field_transcript_file
     - field.field.node.video.field_transcript_text
     - field.field.node.video.field_video_date
+    - field.field.node.video.field_video_playlist
     - node.type.video
   module:
     - datetime
@@ -45,6 +50,7 @@ third_party_settings:
         - field_transcript_file
         - field_transcript_text
         - field_related_videos
+        - field_video_playlist
       parent_name: group_vertical_tabs
       weight: 20
       format_type: tab
@@ -59,6 +65,10 @@ third_party_settings:
     group_related_content_terms:
       children:
         - field_related_people
+        - field_event_series
+        - field_policy_topics
+        - field_research_centers
+        - field_tags
       parent_name: group_vertical_tabs
       weight: 21
       format_type: tab
@@ -112,12 +122,32 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_event_series:
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_featured_image:
     weight: 2
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_policy_topics:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_related_people:
     weight: 14
@@ -131,6 +161,26 @@ content:
     region: content
   field_related_videos:
     weight: 7
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_research_centers:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags:
+    weight: 18
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -166,6 +216,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_video_playlist:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path

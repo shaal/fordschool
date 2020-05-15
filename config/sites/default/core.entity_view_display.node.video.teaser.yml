@@ -6,13 +6,18 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.video.body
     - field.field.node.video.field_duration
+    - field.field.node.video.field_event_series
     - field.field.node.video.field_featured_image
+    - field.field.node.video.field_policy_topics
     - field.field.node.video.field_related_people
     - field.field.node.video.field_related_videos
+    - field.field.node.video.field_research_centers
+    - field.field.node.video.field_tags
     - field.field.node.video.field_teaser_image
     - field.field.node.video.field_transcript_file
     - field.field.node.video.field_transcript_text
     - field.field.node.video.field_video_date
+    - field.field.node.video.field_video_playlist
     - node.type.video
   module:
     - text
@@ -37,10 +42,15 @@ content:
     region: content
 hidden:
   field_duration: true
+  field_event_series: true
   field_featured_image: true
+  field_policy_topics: true
   field_related_people: true
   field_related_videos: true
+  field_research_centers: true
+  field_tags: true
   field_teaser_image: true
   field_transcript_file: true
   field_transcript_text: true
   field_video_date: true
+  field_video_playlist: true
