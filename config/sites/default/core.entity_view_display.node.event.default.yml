@@ -6,16 +6,24 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_event_host
+    - field.field.node.event.field_event_series
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_featured
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_location
     - field.field.node.event.field_page_lead
+    - field.field.node.event.field_policy_topics
     - field.field.node.event.field_registration_link
     - field.field.node.event.field_related_audio
     - field.field.node.event.field_related_people
     - field.field.node.event.field_related_video
+    - field.field.node.event.field_research_centers
     - field.field.node.event.field_speaker
     - field.field.node.event.field_stream_links
     - field.field.node.event.field_subheading
+    - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_time
     - node.type.event
@@ -50,6 +58,32 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_event_host:
+    weight: 120
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_series:
+    weight: 116
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_featured:
+    weight: 119
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_featured_image:
     type: entity_reference_entity_view
     weight: 102
@@ -72,6 +106,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_policy_topics:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_registration_link:
     weight: 109
@@ -110,6 +152,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_research_centers:
+    weight: 118
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_speaker:
     weight: 105
     label: above
@@ -138,6 +188,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_teaser_image:
     type: entity_reference_entity_view
     weight: 112
@@ -160,4 +218,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_date: true
+  field_event_type: true

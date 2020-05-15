@@ -6,16 +6,24 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_event_host
+    - field.field.node.event.field_event_series
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_featured
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_location
     - field.field.node.event.field_page_lead
+    - field.field.node.event.field_policy_topics
     - field.field.node.event.field_registration_link
     - field.field.node.event.field_related_audio
     - field.field.node.event.field_related_people
     - field.field.node.event.field_related_video
+    - field.field.node.event.field_research_centers
     - field.field.node.event.field_speaker
     - field.field.node.event.field_stream_links
     - field.field.node.event.field_subheading
+    - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_time
     - node.type.event
@@ -166,6 +174,33 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_event_host:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_event_series:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_featured:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_featured_image:
     type: media_library_widget
     weight: 4
@@ -188,6 +223,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_policy_topics:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_registration_link:
     weight: 20
@@ -224,6 +269,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_research_centers:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_speaker:
     weight: 5
     settings:
@@ -247,6 +302,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_tags:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_teaser_image:
     type: media_library_widget
@@ -308,4 +373,6 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_date: true
+  field_event_type: true
