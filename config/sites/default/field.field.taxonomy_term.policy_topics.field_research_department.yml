@@ -1,0 +1,21 @@
+uuid: d3f8ff03-e485-4319-9e94-a170d951c032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_research_department
+    - taxonomy.vocabulary.policy_topics
+id: taxonomy_term.policy_topics.field_research_department
+field_name: field_research_department
+entity_type: taxonomy_term
+bundle: policy_topics
+label: 'Related Research Centers and Departments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

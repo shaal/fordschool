@@ -1,0 +1,23 @@
+uuid: dea8e99d-efeb-4884-bc83-04284167c63f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_size
+    - node.type.course
+id: node.course.field_class_size
+field_name: field_class_size
+entity_type: node
+bundle: course
+label: 'Class Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

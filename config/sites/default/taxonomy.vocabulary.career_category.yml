@@ -1,0 +1,8 @@
+uuid: 95099124-709d-4f09-a9a2-451c3cd27daa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Career Category'
+vid: career_category
+description: 'This vocabulary is used on the graduate map content type to categorize the career types.'
+weight: 0
