@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.event.field_related_video
     - field.field.node.event.field_research_centers
     - field.field.node.event.field_speaker
+    - field.field.node.event.field_stream_embed
     - field.field.node.event.field_stream_links
     - field.field.node.event.field_subheading
     - field.field.node.event.field_tags
@@ -28,6 +29,7 @@ dependencies:
     - field.field.node.event.field_time
     - node.type.event
   module:
+    - datetime
     - field_group
     - link
     - media_library
@@ -56,6 +58,7 @@ third_party_settings:
       label: 'Vertical Tabs'
     group_main:
       children:
+        - field_featured
         - title
         - field_subheading
         - field_page_lead
@@ -75,11 +78,15 @@ third_party_settings:
       label: Main
     group_event_details:
       children:
+        - field_date
+        - field_time
         - field_address
         - field_location
-        - field_time
         - field_contact
         - field_registration_link
+        - field_event_series
+        - field_event_host
+        - field_event_type
       parent_name: group_vertical_tabs
       weight: 21
       format_type: tab
@@ -96,6 +103,9 @@ third_party_settings:
         - field_related_audio
         - field_related_video
         - field_related_people
+        - field_policy_topics
+        - field_research_centers
+        - field_tags
       parent_name: group_vertical_tabs
       weight: 22
       format_type: tab
@@ -124,6 +134,7 @@ third_party_settings:
     group_event_stream:
       children:
         - field_stream_links
+        - field_stream_embed
       parent_name: group_vertical_tabs
       weight: 24
       format_type: tab
@@ -142,7 +153,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 33
     settings:
       rows: 9
       summary_rows: 3
@@ -157,7 +168,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_address:
-    weight: 16
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -165,7 +176,7 @@ content:
     type: string_textarea
     region: content
   field_contact:
-    weight: 19
+    weight: 4
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -174,8 +185,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_event_host:
-    weight: 30
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -185,7 +202,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_event_series:
-    weight: 26
+    weight: 6
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -194,6 +211,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_event_type:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_featured:
     weight: 29
     settings:
@@ -203,13 +230,13 @@ content:
     region: content
   field_featured_image:
     type: media_library_widget
-    weight: 4
+    weight: 34
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_location:
-    weight: 17
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -217,7 +244,7 @@ content:
     type: string_textarea
     region: content
   field_page_lead:
-    weight: 2
+    weight: 32
     settings:
       rows: 5
       placeholder: ''
@@ -225,7 +252,7 @@ content:
     type: string_textarea
     region: content
   field_policy_topics:
-    weight: 27
+    weight: 19
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -235,7 +262,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_registration_link:
-    weight: 20
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -270,7 +297,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_research_centers:
-    weight: 28
+    weight: 20
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -280,12 +307,19 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_speaker:
-    weight: 5
+    weight: 35
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_stream_embed:
+    type: media_library_widget
+    weight: 26
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_stream_links:
     weight: 25
@@ -296,7 +330,7 @@ content:
     type: link_default
     region: content
   field_subheading:
-    weight: 1
+    weight: 31
     settings:
       size: 60
       placeholder: ''
@@ -304,7 +338,7 @@ content:
     type: string_textfield
     region: content
   field_tags:
-    weight: 31
+    weight: 21
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -315,13 +349,13 @@ content:
     region: content
   field_teaser_image:
     type: media_library_widget
-    weight: 18
+    weight: 30
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_time:
-    weight: 18
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -357,7 +391,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 30
     region: content
     settings:
       size: 60
@@ -373,6 +407,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  field_date: true
-  field_event_type: true
+hidden: {  }
