@@ -1,0 +1,28 @@
+uuid: dbb39013-f620-4fdb-b7a2-b31146ea1e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_people
+    - node.type.profile
+    - node.type.video
+id: node.video.field_related_people
+field_name: field_related_people
+entity_type: node
+bundle: video
+label: 'Related People'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
