@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.profile.field_bio
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_degree_track
+    - field.field.node.profile.field_department_reference
     - field.field.node.profile.field_educational_background
     - field.field.node.profile.field_facebook_url
     - field.field.node.profile.field_fax
@@ -22,9 +24,11 @@ dependencies:
     - field.field.node.profile.field_phone_number
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
+    - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_city
     - field.field.node.profile.field_profile_state
     - field.field.node.profile.field_profile_title
+    - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
     - field.field.node.profile.field_twitter_url
@@ -201,6 +205,26 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
+  field_degree_track:
+    weight: 46
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_department_reference:
+    weight: 45
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_educational_background:
     weight: 25
     settings:
@@ -330,6 +354,16 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_profile_category:
+    weight: 44
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_profile_city:
     weight: 18
     settings:
@@ -353,6 +387,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_profile_type:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_profile_zip:
     weight: 20

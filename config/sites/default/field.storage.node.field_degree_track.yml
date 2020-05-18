@@ -1,0 +1,20 @@
+uuid: 998bb99c-9843-4b79-9cfd-732fb688a126
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_degree_track
+field_name: field_degree_track
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
