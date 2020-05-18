@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70d8507e2db1147c45c384f684fb35e7",
+    "content-hash": "f11b4fde3e4c6848f177087abfcc846b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1413,6 +1413,53 @@
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group"
+            }
+        },
+        {
+            "name": "drupal/time_field",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/time_field.git",
+                "reference": "8.x-1.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/time_field-8.x-1.13.zip",
+                "reference": "8.x-1.13",
+                "shasum": "5e2695b4a45603801c383369d9fc3be7667b435f"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.13",
+                    "datestamp": "1572814685",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "lostkoder",
+                    "homepage": "https://www.drupal.org/user/3545132"
+                }
+            ],
+            "description": "Provides \"Time Field\" and \"Time Range Field\".",
+            "homepage": "https://www.drupal.org/project/time_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/time_field"
             }
         },
         {
