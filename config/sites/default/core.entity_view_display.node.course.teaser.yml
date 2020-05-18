@@ -18,14 +18,11 @@ dependencies:
     - field.field.node.course.field_degree_track
     - field.field.node.course.field_instructor
     - field.field.node.course.field_meets_reference
-    - field.field.node.course.field_policy_topics
     - field.field.node.course.field_promotion_term
-    - field.field.node.course.field_research_centers
     - field.field.node.course.field_semester
     - field.field.node.course.field_students
     - field.field.node.course.field_syllabus_file
     - field.field.node.course.field_syllabus_link
-    - field.field.node.course.field_tags
     - field.field.node.course.field_um_course_number
     - field.field.node.course.field_video
     - node.type.course
@@ -64,13 +61,10 @@ hidden:
   field_degree_track: true
   field_instructor: true
   field_meets_reference: true
-  field_policy_topics: true
   field_promotion_term: true
-  field_research_centers: true
   field_semester: true
   field_students: true
   field_syllabus_file: true
   field_syllabus_link: true
-  field_tags: true
   field_um_course_number: true
   field_video: true
