@@ -34,6 +34,7 @@ dependencies:
     - field.field.node.profile.field_recent_publications
     - field.field.node.profile.field_research_centers
     - field.field.node.profile.field_short_profile_title
+    - field.field.node.profile.field_tags
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
     - field.field.node.profile.field_website
@@ -451,6 +452,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_tags:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_twitter_url:
     weight: 31
