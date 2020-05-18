@@ -1,0 +1,19 @@
+uuid: 6852da3f-1bef-4b21-bb21-8fcf4068247b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_short_profile_title
+field_name: field_short_profile_title
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.profile.field_mini_bio
     - field.field.node.profile.field_name_suffix
     - field.field.node.profile.field_phone_number
+    - field.field.node.profile.field_policy_topics
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
     - field.field.node.profile.field_profile_category
@@ -31,6 +32,8 @@ dependencies:
     - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_research_centers
+    - field.field.node.profile.field_short_profile_title
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
     - field.field.node.profile.field_website
@@ -49,6 +52,9 @@ third_party_settings:
         - title
         - field_mini_bio
         - field_bio
+        - field_profile_category
+        - field_profile_type
+        - field_department_reference
         - field_image
         - field_first_name
         - field_middle_name
@@ -94,6 +100,8 @@ third_party_settings:
         - field_professional_affiliations
         - field_current_research
         - field_recent_publications
+        - field_policy_topics
+        - field_research_centers
       parent_name: group_vertical_tabs
       weight: 39
       format_type: tab
@@ -127,7 +135,8 @@ third_party_settings:
         required_fields: true
       label: 'Related Links'
     group_student_profile:
-      children: {  }
+      children:
+        - field_degree_track
       parent_name: group_vertical_tabs
       weight: 41
       format_type: tab
@@ -140,7 +149,8 @@ third_party_settings:
         required_fields: true
       label: 'Student Profile'
     group_teaser_display:
-      children: {  }
+      children:
+        - field_short_profile_title
       parent_name: group_vertical_tabs
       weight: 42
       format_type: tab
@@ -161,7 +171,7 @@ third_party_settings:
         - group_student_profile
         - group_teaser_display
       parent_name: ''
-      weight: 7
+      weight: 6
       format_type: tabs
       region: content
       format_settings:
@@ -176,7 +186,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -206,7 +216,7 @@ content:
     third_party_settings: {  }
     region: content
   field_degree_track:
-    weight: 46
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -216,7 +226,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_department_reference:
-    weight: 45
+    weight: 5
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -252,7 +262,7 @@ content:
     type: string_textfield
     region: content
   field_first_name:
-    weight: 5
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -277,13 +287,13 @@ content:
     region: content
   field_image:
     type: media_library_widget
-    weight: 4
+    weight: 6
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_last_name:
-    weight: 7
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -307,7 +317,7 @@ content:
     type: link_default
     region: content
   field_middle_name:
-    weight: 6
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -323,7 +333,7 @@ content:
     type: text_textarea
     region: content
   field_name_suffix:
-    weight: 8
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -337,6 +347,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_policy_topics:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_professional_affiliations:
     weight: 26
@@ -355,7 +375,7 @@ content:
     type: string_textarea
     region: content
   field_profile_category:
-    weight: 44
+    weight: 3
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -381,7 +401,7 @@ content:
     type: string_textfield
     region: content
   field_profile_title:
-    weight: 10
+    weight: 12
     settings:
       rows: 5
       placeholder: ''
@@ -389,7 +409,7 @@ content:
     type: string_textarea
     region: content
   field_profile_type:
-    weight: 43
+    weight: 4
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -414,6 +434,24 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_research_centers:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_short_profile_title:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_twitter_url:
     weight: 31
     settings:
@@ -423,7 +461,7 @@ content:
     type: link_default
     region: content
   field_uniqname:
-    weight: 9
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -448,7 +486,7 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -456,21 +494,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 2
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 3
     region: content
     third_party_settings: {  }
   title:
@@ -483,7 +521,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60

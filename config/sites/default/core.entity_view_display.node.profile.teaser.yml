@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.profile.field_mini_bio
     - field.field.node.profile.field_name_suffix
     - field.field.node.profile.field_phone_number
+    - field.field.node.profile.field_policy_topics
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
     - field.field.node.profile.field_profile_category
@@ -32,6 +33,8 @@ dependencies:
     - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_research_centers
+    - field.field.node.profile.field_short_profile_title
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
     - field.field.node.profile.field_website
@@ -69,6 +72,7 @@ hidden:
   field_mini_bio: true
   field_name_suffix: true
   field_phone_number: true
+  field_policy_topics: true
   field_professional_affiliations: true
   field_profile_address: true
   field_profile_category: true
@@ -78,6 +82,8 @@ hidden:
   field_profile_type: true
   field_profile_zip: true
   field_recent_publications: true
+  field_research_centers: true
+  field_short_profile_title: true
   field_twitter_url: true
   field_uniqname: true
   field_website: true
