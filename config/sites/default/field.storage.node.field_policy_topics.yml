@@ -1,4 +1,4 @@
-uuid: 904b5e1a-7bc1-4cca-938b-054e3f216b63
+uuid: 289bc7bc-fa2d-4ff3-8bda-8081a4155453
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
