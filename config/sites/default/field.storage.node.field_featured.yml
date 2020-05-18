@@ -1,18 +1,17 @@
-uuid: da0ecc99-7a8a-4fd7-bfa0-6ed2d6d6b94e
+uuid: 0c3ee8e2-d3d9-49f5-8ffc-c896e793a181
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_related_video
-field_name: field_related_video
+id: node.field_featured
+field_name: field_featured
 entity_type: node
-type: entity_reference
-settings:
-  target_type: node
+type: boolean
+settings: {  }
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

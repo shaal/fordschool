@@ -1,15 +1,16 @@
-uuid: da0ecc99-7a8a-4fd7-bfa0-6ed2d6d6b94e
+uuid: c12f3a1f-db08-4f00-9e33-765126007a02
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_related_video
-field_name: field_related_video
+    - taxonomy
+id: node.field_event_host
+field_name: field_event_host
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

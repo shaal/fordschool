@@ -6,20 +6,29 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_contact
+    - field.field.node.event.field_date_range
+    - field.field.node.event.field_event_host
+    - field.field.node.event.field_event_series
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_featured
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_location
     - field.field.node.event.field_page_lead
+    - field.field.node.event.field_policy_topics
     - field.field.node.event.field_registration_link
     - field.field.node.event.field_related_audio
     - field.field.node.event.field_related_people
     - field.field.node.event.field_related_video
+    - field.field.node.event.field_research_centers
     - field.field.node.event.field_speaker
+    - field.field.node.event.field_stream_embed
     - field.field.node.event.field_stream_links
     - field.field.node.event.field_subheading
+    - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_time
     - node.type.event
   module:
+    - datetime_range
     - link
     - text
     - user
@@ -31,51 +40,103 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 107
-    label: above
+    weight: 7
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_contact:
-    weight: 108
-    label: above
+    weight: 8
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_date_range:
+    weight: 25
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_host:
+    weight: 20
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_series:
+    weight: 16
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    weight: 24
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_featured:
+    weight: 19
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 102
-    label: above
+    weight: 2
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
   field_location:
-    weight: 106
-    label: above
+    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_page_lead:
-    weight: 103
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_policy_topics:
+    weight: 17
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_registration_link:
-    weight: 109
-    label: above
+    weight: 9
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -87,40 +148,57 @@ content:
     region: content
   field_related_audio:
     type: entity_reference_entity_view
-    weight: 110
-    label: above
+    weight: 10
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
   field_related_people:
-    weight: 114
-    label: above
+    weight: 14
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_related_video:
-    weight: 111
-    label: above
+    weight: 11
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_research_centers:
+    weight: 18
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_speaker:
-    weight: 105
-    label: above
+    weight: 5
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_stream_embed:
+    type: entity_reference_entity_view
+    weight: 22
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_stream_links:
-    weight: 113
-    label: above
+    weight: 13
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -131,33 +209,33 @@ content:
     type: link
     region: content
   field_subheading:
-    weight: 104
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    weight: 21
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_teaser_image:
     type: entity_reference_entity_view
-    weight: 112
-    label: above
+    weight: 12
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  field_time:
-    weight: 115
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

@@ -1,11 +1,11 @@
-uuid: 16db011e-9463-45b2-a043-4225e61249b3
+uuid: ad7c7c1d-6185-4565-ba41-0d35ade10830
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_time
-field_name: field_time
+id: node.field_impact_story_degree
+field_name: field_impact_story_degree
 entity_type: node
 type: string
 settings:
