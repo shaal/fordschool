@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_contact
-    - field.field.node.event.field_date
+    - field.field.node.event.field_date_range
     - field.field.node.event.field_event_host
     - field.field.node.event.field_event_series
     - field.field.node.event.field_event_type
@@ -53,7 +53,7 @@ content:
 hidden:
   field_address: true
   field_contact: true
-  field_date: true
+  field_date_range: true
   field_event_host: true
   field_event_series: true
   field_event_type: true

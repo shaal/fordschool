@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_contact
-    - field.field.node.event.field_date
+    - field.field.node.event.field_date_range
     - field.field.node.event.field_event_host
     - field.field.node.event.field_event_series
     - field.field.node.event.field_event_type
@@ -29,7 +29,7 @@ dependencies:
     - field.field.node.event.field_time
     - node.type.event
   module:
-    - datetime
+    - datetime_range
     - link
     - text
     - user
@@ -60,15 +60,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_date:
-    type: datetime_default
-    weight: 23
-    region: content
-    label: hidden
+  field_date_range:
+    weight: 25
+    label: above
     settings:
+      separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
+    type: daterange_default
+    region: content
   field_event_host:
     weight: 20
     label: hidden
