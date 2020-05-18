@@ -50,7 +50,7 @@ content:
     region: content
   field_class_number:
     weight: 111
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -61,7 +61,7 @@ content:
     region: content
   field_class_size:
     weight: 113
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -70,14 +70,14 @@ content:
     region: content
   field_course_level:
     weight: 108
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_course_location:
     weight: 110
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -85,7 +85,7 @@ content:
     region: content
   field_course_name:
     weight: 104
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -93,7 +93,7 @@ content:
     region: content
   field_course_number:
     weight: 105
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -101,7 +101,7 @@ content:
     region: content
   field_course_section:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -109,7 +109,7 @@ content:
     region: content
   field_course_time:
     weight: 125
-    label: above
+    label: hidden
     settings:
       time_format: 'h:i a'
       timerange_format: 'start ~ end'
@@ -118,15 +118,16 @@ content:
     region: content
   field_course_year:
     weight: 119
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_credit_hours:
     weight: 112
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -135,7 +136,7 @@ content:
     region: content
   field_date:
     weight: 109
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
@@ -144,72 +145,80 @@ content:
     region: content
   field_degree_track:
     weight: 121
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_instructor:
     weight: 116
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_meets_reference:
     weight: 120
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_policy_topics:
     weight: 124
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_promotion_term:
     weight: 117
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_research_centers:
     weight: 122
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_semester:
     weight: 118
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_students:
     weight: 115
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_syllabus_file:
     type: entity_reference_entity_view
     weight: 102
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -217,7 +226,7 @@ content:
     region: content
   field_syllabus_link:
     weight: 103
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -229,15 +238,16 @@ content:
     region: content
   field_tags:
     weight: 123
-    label: above
+    label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_um_course_number:
     weight: 106
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -246,7 +256,7 @@ content:
   field_video:
     type: entity_reference_entity_view
     weight: 114
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -254,7 +264,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

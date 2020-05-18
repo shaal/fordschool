@@ -189,13 +189,9 @@ content:
     region: content
   field_course_year:
     weight: 10
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_credit_hours:
     weight: 16
@@ -212,13 +208,9 @@ content:
     region: content
   field_degree_track:
     weight: 21
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_instructor:
     weight: 3
@@ -232,13 +224,9 @@ content:
     region: content
   field_meets_reference:
     weight: 19
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_policy_topics:
     weight: 10
@@ -272,13 +260,9 @@ content:
     region: content
   field_semester:
     weight: 20
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_students:
     weight: 9
