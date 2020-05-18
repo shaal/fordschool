@@ -27,7 +27,6 @@ dependencies:
     - field.field.node.event.field_subheading
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_timestamp
     - node.type.event
   module:
     - text
@@ -73,4 +72,3 @@ hidden:
   field_subheading: true
   field_tags: true
   field_teaser_image: true
-  field_timestamp: true
