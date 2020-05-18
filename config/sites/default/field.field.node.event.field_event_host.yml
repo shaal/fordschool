@@ -1,0 +1,29 @@
+uuid: c9765187-62c8-4dc0-90bd-b46f3adb325f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_host
+    - node.type.event
+    - taxonomy.vocabulary.departments_and_research_centers
+id: node.event.field_event_host
+field_name: field_event_host
+entity_type: node
+bundle: event
+label: 'Event Host'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments_and_research_centers: departments_and_research_centers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

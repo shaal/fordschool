@@ -1,0 +1,19 @@
+uuid: 0e2d6bd4-1780-4fa3-87db-8b6abe317d9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_story_headline
+    - node.type.news
+id: node.news.field_impact_story_headline
+field_name: field_impact_story_headline
+entity_type: node
+bundle: news
+label: 'Impact Story Headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

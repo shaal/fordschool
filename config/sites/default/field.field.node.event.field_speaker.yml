@@ -1,0 +1,19 @@
+uuid: 6845c255-cb57-431d-8086-33e71fee983d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speaker
+    - node.type.event
+id: node.event.field_speaker
+field_name: field_speaker
+entity_type: node
+bundle: event
+label: Speaker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
