@@ -1,0 +1,8 @@
+uuid: 33a620f3-240c-4e06-9972-5c616cc66596
+langcode: en
+status: true
+dependencies: {  }
+name: 'News Type'
+vid: news_type
+description: 'used to organize news into different types such as the default of ‘article’ or other options like ‘In the News’, ‘Press Release’'
+weight: 0

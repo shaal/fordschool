@@ -5,6 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.course.body
+    - field.field.node.course.field_class_number
+    - field.field.node.course.field_class_size
+    - field.field.node.course.field_course_level
+    - field.field.node.course.field_course_location
+    - field.field.node.course.field_course_name
+    - field.field.node.course.field_course_number
+    - field.field.node.course.field_course_section
+    - field.field.node.course.field_credit_hours
+    - field.field.node.course.field_date
+    - field.field.node.course.field_instructor
+    - field.field.node.course.field_students
+    - field.field.node.course.field_syllabus_file
+    - field.field.node.course.field_syllabus_link
+    - field.field.node.course.field_um_course_number
+    - field.field.node.course.field_video
     - node.type.course
   module:
     - text
@@ -27,4 +42,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_class_number: true
+  field_class_size: true
+  field_course_level: true
+  field_course_location: true
+  field_course_name: true
+  field_course_number: true
+  field_course_section: true
+  field_credit_hours: true
+  field_date: true
+  field_instructor: true
+  field_students: true
+  field_syllabus_file: true
+  field_syllabus_link: true
+  field_um_course_number: true
+  field_video: true

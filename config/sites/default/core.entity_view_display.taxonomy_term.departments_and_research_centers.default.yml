@@ -1,0 +1,81 @@
+uuid: 99474d17-57dd-400f-b217-cdf86b1d66c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.departments_and_research_centers.field_abbreviation
+    - field.field.taxonomy_term.departments_and_research_centers.field_destination_link
+    - field.field.taxonomy_term.departments_and_research_centers.field_email
+    - field.field.taxonomy_term.departments_and_research_centers.field_image
+    - field.field.taxonomy_term.departments_and_research_centers.field_logo
+    - field.field.taxonomy_term.departments_and_research_centers.field_phone
+    - taxonomy.vocabulary.departments_and_research_centers
+  module:
+    - link
+    - text
+id: taxonomy_term.departments_and_research_centers.default
+targetEntityType: taxonomy_term
+bundle: departments_and_research_centers
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abbreviation:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_destination_link:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_email:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_phone:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
