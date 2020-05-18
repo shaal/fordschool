@@ -26,7 +26,7 @@ dependencies:
     - field.field.node.event.field_subheading
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_time
+    - field.field.node.event.field_timestamp
     - node.type.event
   module:
     - datetime_range
@@ -35,6 +35,7 @@ dependencies:
     - media_library
     - path
     - text
+    - time_field
 third_party_settings:
   field_group:
     group_vertical_tabs:
@@ -354,13 +355,13 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_time:
-    weight: 1
+  field_timestamp:
+    weight: 36
     settings:
-      size: 60
-      placeholder: ''
+      enabled: false
+      step: 5
     third_party_settings: {  }
-    type: string_textfield
+    type: time_widget
     region: content
   path:
     type: path

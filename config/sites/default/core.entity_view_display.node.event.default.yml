@@ -26,12 +26,13 @@ dependencies:
     - field.field.node.event.field_subheading
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_time
+    - field.field.node.event.field_timestamp
     - node.type.event
   module:
     - datetime_range
     - link
     - text
+    - time_field
     - user
 id: node.event.default
 targetEntityType: node
@@ -234,13 +235,13 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_time:
-    weight: 15
-    label: hidden
+  field_timestamp:
+    weight: 26
+    label: above
     settings:
-      link_to_entity: false
+      time_format: 'h:i a'
     third_party_settings: {  }
-    type: string
+    type: time_formatter
     region: content
   links:
     weight: 0
