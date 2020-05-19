@@ -1,0 +1,10 @@
+uuid: c226dc3d-cb86-47d0-9f63-28a2b92734d0
+langcode: en
+status: true
+dependencies: {  }
+id: node__news
+label: 'Content: News'
+tags:
+  image_src: '[node:field_featured_image:entity:url]'
+  og_image: "[node:field_featured_image:entity:url]\t"
+  twitter_cards_image: "[node:field_featured_image:entity:url]\t"
