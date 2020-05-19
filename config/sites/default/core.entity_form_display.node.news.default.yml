@@ -71,13 +71,13 @@ third_party_settings:
       label: Main
     group_related_content_terms:
       children:
-        - field_related_audio
-        - field_related_video
-        - field_event_series
         - field_policy_topics
         - field_related_people
         - field_research_centers
         - field_tags
+        - field_event_series
+        - field_related_video
+        - field_related_audio
       parent_name: group_vertical_tabs
       weight: 22
       format_type: tab
@@ -153,7 +153,7 @@ content:
     type: datetime_default
     region: content
   field_event_series:
-    weight: 33
+    weight: 38
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -230,7 +230,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_related_audio:
-    weight: 31
+    weight: 40
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -247,7 +247,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_related_video:
-    weight: 32
+    weight: 39
     settings:
       match_operator: CONTAINS
       match_limit: 10
