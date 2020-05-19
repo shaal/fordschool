@@ -91,9 +91,9 @@ third_party_settings:
       label: 'Related Content & Terms'
     group_teaser_display:
       children:
-        - field_teaser_text
-        - field_impact_story_headline
         - field_impact_story_name
+        - field_impact_story_headline
+        - field_teaser_text
         - field_impact_story_degree
         - field_teaser_image
       parent_name: group_vertical_tabs
@@ -170,7 +170,7 @@ content:
     type: media_library_widget
     region: content
   field_impact_story_degree:
-    weight: 18
+    weight: 20
     settings:
       size: 60
       placeholder: ''
@@ -178,7 +178,7 @@ content:
     type: string_textfield
     region: content
   field_impact_story_headline:
-    weight: 16
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -277,14 +277,14 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_teaser_image:
-    weight: 29
+    weight: 21
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_teaser_text:
-    weight: 15
+    weight: 19
     settings:
       size: 60
       placeholder: ''
