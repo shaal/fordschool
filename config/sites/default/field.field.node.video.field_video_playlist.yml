@@ -1,0 +1,29 @@
+uuid: 4a040d73-fff9-4216-9507-7e6600b13fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_playlist
+    - node.type.video
+    - taxonomy.vocabulary.video_playlist
+id: node.video.field_video_playlist
+field_name: field_video_playlist
+entity_type: node
+bundle: video
+label: 'Video Playlist'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      video_playlist: video_playlist
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 34c3f38d-f5be-4033-a46a-4e1092c2f116
+langcode: en
+status: true
+dependencies: {  }
+id: audio
+label: Audio
+description: 'Upload audio-based media file formats such as podcasts, soundbites. '
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file
+field_map:
+  name: name
