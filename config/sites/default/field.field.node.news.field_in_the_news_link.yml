@@ -11,7 +11,7 @@ id: node.news.field_in_the_news_link
 field_name: field_in_the_news_link
 entity_type: node
 bundle: news
-label: 'In the News Link'
+label: 'In the Media Link'
 description: ''
 required: false
 translatable: false

@@ -9,7 +9,7 @@ id: node.news.field_impact_story_degree
 field_name: field_impact_story_degree
 entity_type: node
 bundle: news
-label: 'Impact Story Degree'
+label: 'Teaser Degree'
 description: ''
 required: false
 translatable: false

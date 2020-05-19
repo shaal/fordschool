@@ -28,6 +28,7 @@ dependencies:
     - datetime
     - field_group
     - link
+    - media_library
     - path
     - text
 third_party_settings:
@@ -70,13 +71,13 @@ third_party_settings:
       label: Main
     group_related_content_terms:
       children:
-        - field_related_video
-        - field_policy_topics
-        - field_research_centers
-        - field_related_people
         - field_related_audio
-        - field_tags
+        - field_related_video
         - field_event_series
+        - field_policy_topics
+        - field_related_people
+        - field_research_centers
+        - field_tags
       parent_name: group_vertical_tabs
       weight: 22
       format_type: tab
@@ -164,12 +165,9 @@ content:
   field_featured_image:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_impact_story_degree:
     weight: 18
@@ -222,7 +220,7 @@ content:
     type: string_textarea
     region: content
   field_policy_topics:
-    weight: 28
+    weight: 34
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -234,15 +232,12 @@ content:
   field_related_audio:
     weight: 31
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_related_people:
-    weight: 30
+    weight: 35
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -252,7 +247,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_related_video:
-    weight: 27
+    weight: 32
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -262,7 +257,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_research_centers:
-    weight: 29
+    weight: 36
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -272,7 +267,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_tags:
-    weight: 32
+    weight: 37
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -284,12 +279,9 @@ content:
   field_teaser_image:
     weight: 29
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_teaser_text:
     weight: 15
