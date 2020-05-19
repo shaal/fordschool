@@ -79,9 +79,14 @@ To run project-related commands other than `vagrant up` and `vagrant ssh`:
 * You'll be in your Drupal 8 project root, at the path `/var/www/fordschool.local/`
 * Drupal 7 project root will be located at `/var/www/d7.fordschool.local/`
 
-To work on the styleguide:
+## Styleguide Development
 
-* @todo TBA when styleguide is added to the repo.
+(Make sure you are using Node version 11, `nvm use 11`)
+
+* `cd web/themes/custom/ford`
+* `yarn` (Install dependencies, required only once)
+* `yarn start`
+* Styleguide is available at: `http://localhost:3000/pattern-lab/public/`
 
 ## Troubleshooting
 
@@ -121,10 +126,6 @@ Additional information on developing for Drupal within this environment is in [d
 ## Deployment
 
 @todo This section needs to be customized per-project.
-
-## Styleguide Development
-
-@todo
 
 ## Additional Documentation
 
