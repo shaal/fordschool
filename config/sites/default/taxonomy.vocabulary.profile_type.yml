@@ -1,0 +1,8 @@
+uuid: 30e3912d-50c3-4f2a-bbc3-d565a4a61f9c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Profile Type'
+vid: profile_type
+description: 'Used on profile content, this vocabulary is used to categorize all profiles into types.'
+weight: 0

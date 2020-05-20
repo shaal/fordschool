@@ -1,0 +1,8 @@
+uuid: 85e3da73-60df-4ee1-b738-ac689b34ba58
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Days'
+vid: course_days
+description: 'Used for courses to indicate the days on which a course occurs.'
+weight: 0

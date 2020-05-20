@@ -4,10 +4,89 @@ status: true
 dependencies:
   config:
     - field.field.node.course.body
+    - field.field.node.course.field_class_number
+    - field.field.node.course.field_class_size
+    - field.field.node.course.field_course_level
+    - field.field.node.course.field_course_location
+    - field.field.node.course.field_course_name
+    - field.field.node.course.field_course_number
+    - field.field.node.course.field_course_section
+    - field.field.node.course.field_credit_hours
+    - field.field.node.course.field_date
+    - field.field.node.course.field_instructor
+    - field.field.node.course.field_students
+    - field.field.node.course.field_syllabus_file
+    - field.field.node.course.field_syllabus_link
+    - field.field.node.course.field_um_course_number
+    - field.field.node.course.field_video
     - node.type.course
   module:
+    - datetime
+    - field_group
+    - link
+    - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_course_details:
+      children:
+        - title
+        - body
+        - field_instructor
+        - field_syllabus_file
+        - field_syllabus_link
+        - field_course_name
+        - field_course_number
+        - field_um_course_number
+        - field_course_section
+        - field_course_level
+        - field_date
+        - field_course_location
+        - field_class_number
+        - field_credit_hours
+        - field_class_size
+      parent_name: group_vertical_tabs
+      weight: 7
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+        direction: vertical
+      label: 'Course Details'
+    group_related_content_and_terms:
+      children:
+        - field_video
+        - field_students
+      parent_name: group_vertical_tabs
+      weight: 8
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Related Content and Terms'
+    group_vertical_tabs:
+      children:
+        - group_course_details
+        - group_related_content_and_terms
+      parent_name: ''
+      weight: 6
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'Vertical Tabs'
 id: node.course.default
 targetEntityType: node
 bundle: course
@@ -15,7 +94,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -25,13 +104,128 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_class_number:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_class_size:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_course_level:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_course_location:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_course_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_course_number:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_course_section:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_credit_hours:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_date:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_instructor:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_students:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_syllabus_file:
+    type: media_library_widget
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_syllabus_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_um_course_number:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video:
+    type: media_library_widget
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -39,26 +233,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 2
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 5
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 3
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -66,7 +260,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60

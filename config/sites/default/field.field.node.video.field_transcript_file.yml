@@ -1,0 +1,28 @@
+uuid: 1d0408ed-822f-442d-953d-6737a7d16981
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transcript_file
+    - media.type.document
+    - node.type.video
+id: node.video.field_transcript_file
+field_name: field_transcript_file
+entity_type: node
+bundle: video
+label: 'Transcript File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

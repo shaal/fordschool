@@ -1,0 +1,23 @@
+uuid: 8fbb59d1-bbd9-455a-b9f1-6b6682b5f601
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_hours
+    - node.type.course
+id: node.course.field_credit_hours
+field_name: field_credit_hours
+entity_type: node
+bundle: course
+label: 'Credit Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

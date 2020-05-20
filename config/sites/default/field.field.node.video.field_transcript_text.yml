@@ -1,0 +1,21 @@
+uuid: 88d97b19-ce58-468b-a70f-3a1670b7302b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transcript_text
+    - node.type.video
+  module:
+    - text
+id: node.video.field_transcript_text
+field_name: field_transcript_text
+entity_type: node
+bundle: video
+label: 'Transcript Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

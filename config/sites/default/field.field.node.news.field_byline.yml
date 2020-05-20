@@ -1,15 +1,15 @@
-uuid: b47f1763-8421-4211-9076-c1bafcbfe686
+uuid: 117fa049-ad5a-483d-bacc-56b5d3c3223a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_time
-    - node.type.event
-id: node.event.field_time
-field_name: field_time
+    - field.storage.node.field_byline
+    - node.type.news
+id: node.news.field_byline
+field_name: field_byline
 entity_type: node
-bundle: event
-label: Time
+bundle: news
+label: Byline
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,28 @@
+uuid: 81656724-7eac-4ccf-ac17-4175c3e119b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
+    - taxonomy.vocabulary.departments_and_research_centers
+id: taxonomy_term.departments_and_research_centers.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: departments_and_research_centers
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

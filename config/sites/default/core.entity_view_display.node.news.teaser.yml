@@ -5,6 +5,25 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
+    - field.field.node.news.field_byline
+    - field.field.node.news.field_contact
+    - field.field.node.news.field_date
+    - field.field.node.news.field_event_series
+    - field.field.node.news.field_featured_image
+    - field.field.node.news.field_impact_story_degree
+    - field.field.node.news.field_impact_story_headline
+    - field.field.node.news.field_impact_story_name
+    - field.field.node.news.field_in_the_news_link
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_page_lead
+    - field.field.node.news.field_policy_topics
+    - field.field.node.news.field_related_audio
+    - field.field.node.news.field_related_people
+    - field.field.node.news.field_related_video
+    - field.field.node.news.field_research_centers
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_teaser_image
+    - field.field.node.news.field_teaser_text
     - node.type.news
   module:
     - text
@@ -27,4 +46,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_byline: true
+  field_contact: true
+  field_date: true
+  field_event_series: true
+  field_featured_image: true
+  field_impact_story_degree: true
+  field_impact_story_headline: true
+  field_impact_story_name: true
+  field_in_the_news_link: true
+  field_news_type: true
+  field_page_lead: true
+  field_policy_topics: true
+  field_related_audio: true
+  field_related_people: true
+  field_related_video: true
+  field_research_centers: true
+  field_tags: true
+  field_teaser_image: true
+  field_teaser_text: true
