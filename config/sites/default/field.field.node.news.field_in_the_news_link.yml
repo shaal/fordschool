@@ -1,0 +1,23 @@
+uuid: fedd910d-3379-4e58-b32c-00c132697b44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_the_news_link
+    - node.type.news
+  module:
+    - link
+id: node.news.field_in_the_news_link
+field_name: field_in_the_news_link
+entity_type: node
+bundle: news
+label: 'In the Media Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

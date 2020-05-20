@@ -1,0 +1,29 @@
+uuid: cc3179b6-8aa6-4437-9a46-307219a32507
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_series
+    - node.type.news
+    - taxonomy.vocabulary.event_series
+id: node.news.field_event_series
+field_name: field_event_series
+entity_type: node
+bundle: news
+label: 'Related Event Series'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_series: event_series
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
