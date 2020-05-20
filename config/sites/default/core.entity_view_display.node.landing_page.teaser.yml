@@ -6,7 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_contact
+    - field.field.node.landing_page.field_hero_description
+    - field.field.node.landing_page.field_hero_image
+    - field.field.node.landing_page.field_hero_link
+    - field.field.node.landing_page.field_policy_topics
     - field.field.node.landing_page.field_related_links
+    - field.field.node.landing_page.field_tags
     - node.type.landing_page
   module:
     - text
@@ -31,4 +36,9 @@ content:
     region: content
 hidden:
   field_contact: true
+  field_hero_description: true
+  field_hero_image: true
+  field_hero_link: true
+  field_policy_topics: true
   field_related_links: true
+  field_tags: true
