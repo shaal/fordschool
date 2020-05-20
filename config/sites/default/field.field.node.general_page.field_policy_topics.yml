@@ -1,0 +1,29 @@
+uuid: 839ec7f8-0cea-4f1f-9458-32d37f717a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_topics
+    - node.type.general_page
+    - taxonomy.vocabulary.policy_topics
+id: node.general_page.field_policy_topics
+field_name: field_policy_topics
+entity_type: node
+bundle: general_page
+label: 'Related Policy Topics'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      policy_topics: policy_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
