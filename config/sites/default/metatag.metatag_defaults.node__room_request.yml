@@ -1,0 +1,7 @@
+uuid: 8091fd32-1da5-4039-99b5-e5a0a25af899
+langcode: en
+status: true
+dependencies: {  }
+id: node__room_request
+label: 'Content: Room Request'
+tags: {  }

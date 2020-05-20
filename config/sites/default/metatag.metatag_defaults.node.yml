@@ -8,5 +8,8 @@ id: node
 label: Content
 tags:
   title: '[node:title] | [site:name]'
-  description: '[node:summary]'
   canonical_url: '[node:url]'
+  description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[node:title]'

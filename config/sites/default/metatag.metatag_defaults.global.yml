@@ -12,3 +12,6 @@ tags:
   image_src: '[node:field_featured_image:entity:url]'
   og_image: '[node:field_featured_image:entity:url]'
   twitter_cards_image: '[node:field_featured_image:entity:url]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[current-page:title]'
