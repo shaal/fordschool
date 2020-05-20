@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Course Target'
 vid: course_target
-description: ''
+description: 'Used for promotion term fields.'
 weight: 0
