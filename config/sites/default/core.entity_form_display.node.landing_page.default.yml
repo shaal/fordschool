@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_body_components
     - field.field.node.landing_page.field_contact
     - field.field.node.landing_page.field_department_reference
+    - field.field.node.landing_page.field_full_width_components
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_image
     - field.field.node.landing_page.field_hero_link
@@ -17,6 +19,7 @@ dependencies:
     - field_group
     - link
     - media_library
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -25,6 +28,7 @@ third_party_settings:
       children:
         - group_hero
         - group_main
+        - group_components
         - group_related_content_terms
       parent_name: ''
       weight: 7
@@ -42,7 +46,7 @@ third_party_settings:
         - field_contact
         - field_department_reference
       parent_name: group_vertical_tabs
-      weight: 18
+      weight: 21
       format_type: tab
       region: content
       format_settings:
@@ -58,7 +62,7 @@ third_party_settings:
         - field_policy_topics
         - field_tags
       parent_name: group_vertical_tabs
-      weight: 19
+      weight: 23
       format_type: tab
       region: content
       format_settings:
@@ -74,7 +78,7 @@ third_party_settings:
         - field_hero_description
         - field_hero_link
       parent_name: group_vertical_tabs
-      weight: 17
+      weight: 20
       format_type: tab
       region: content
       format_settings:
@@ -84,6 +88,21 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Hero
+    group_components:
+      children:
+        - field_body_components
+        - field_full_width_components
+      parent_name: group_vertical_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Components
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -105,6 +124,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body_components:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   field_contact:
     weight: 2
     settings:
@@ -124,6 +155,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_full_width_components:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
     region: content
   field_hero_description:
     weight: 14

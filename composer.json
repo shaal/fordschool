@@ -23,6 +23,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/devel": "^2.1",
         "drupal/field_group": "^3.0",
+        "drupal/paragraphs": "^1.11",
         "drupal/simple_sitemap": "^3.6",
         "drupal/workbench": "^1.1",
         "drupal/workbench_tabs": "^1.3",

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_body_components
     - field.field.node.landing_page.field_contact
     - field.field.node.landing_page.field_department_reference
+    - field.field.node.landing_page.field_full_width_components
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_image
     - field.field.node.landing_page.field_hero_link
@@ -14,6 +16,7 @@ dependencies:
     - field.field.node.landing_page.field_tags
     - node.type.landing_page
   module:
+    - entity_reference_revisions
     - link
     - text
     - user
@@ -27,6 +30,15 @@ content:
     type: text_default
     weight: 101
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_body_components:
+    type: entity_reference_revisions_entity_view
+    weight: 110
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   field_contact:
@@ -44,6 +56,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_full_width_components:
+    type: entity_reference_revisions_entity_view
+    weight: 111
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_hero_description:
     weight: 107
