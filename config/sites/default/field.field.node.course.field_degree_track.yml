@@ -1,28 +1,29 @@
-uuid: 09fa33f3-6782-4ead-b7a8-42a2d81ef3df
+uuid: 54794480-31ca-4583-9577-d9199af577a9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_students
+    - field.storage.node.field_degree_track
     - node.type.course
-    - node.type.profile
-id: node.course.field_students
-field_name: field_students
+    - taxonomy.vocabulary.degree_tracks
+id: node.course.field_degree_track
+field_name: field_degree_track
 entity_type: node
 bundle: course
-label: 'Related Students'
+label: 'Degree Track'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      profile: profile
+      degree_tracks: degree_tracks
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: c6cd26d7-6a9d-4656-b8cc-52aae2ed34d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meets_reference
+    - node.type.course
+    - taxonomy.vocabulary.course_days
+id: node.course.field_meets_reference
+field_name: field_meets_reference
+entity_type: node
+bundle: course
+label: 'Meets On Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      course_days: course_days
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

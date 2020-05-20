@@ -1,0 +1,29 @@
+uuid: 430188b2-71fd-4ceb-ae6e-4bf52ad232c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_semester
+    - node.type.course
+    - taxonomy.vocabulary.term
+id: node.course.field_semester
+field_name: field_semester
+entity_type: node
+bundle: course
+label: 'Term Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      term: term
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

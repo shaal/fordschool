@@ -11,12 +11,20 @@ dependencies:
     - field.field.node.course.field_course_name
     - field.field.node.course.field_course_number
     - field.field.node.course.field_course_section
+    - field.field.node.course.field_course_time
+    - field.field.node.course.field_course_year
     - field.field.node.course.field_credit_hours
     - field.field.node.course.field_date
+    - field.field.node.course.field_degree_track
     - field.field.node.course.field_instructor
-    - field.field.node.course.field_students
+    - field.field.node.course.field_meets_reference
+    - field.field.node.course.field_policy_topics
+    - field.field.node.course.field_promotion_term
+    - field.field.node.course.field_research_centers
+    - field.field.node.course.field_semester
     - field.field.node.course.field_syllabus_file
     - field.field.node.course.field_syllabus_link
+    - field.field.node.course.field_tags
     - field.field.node.course.field_um_course_number
     - field.field.node.course.field_video
     - node.type.course
@@ -27,6 +35,7 @@ dependencies:
     - media_library
     - path
     - text
+    - time_field
 third_party_settings:
   field_group:
     group_course_details:
@@ -40,12 +49,18 @@ third_party_settings:
         - field_course_number
         - field_um_course_number
         - field_course_section
+        - field_course_year
         - field_course_level
         - field_date
+        - field_course_time
         - field_course_location
         - field_class_number
         - field_credit_hours
         - field_class_size
+        - field_promotion_term
+        - field_meets_reference
+        - field_semester
+        - field_degree_track
       parent_name: group_vertical_tabs
       weight: 7
       format_type: tab
@@ -62,6 +77,9 @@ third_party_settings:
       children:
         - field_video
         - field_students
+        - field_policy_topics
+        - field_tags
+        - field_research_centers
       parent_name: group_vertical_tabs
       weight: 8
       format_type: tab
@@ -109,14 +127,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_class_number:
-    weight: 14
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_class_size:
-    weight: 16
+    weight: 17
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -129,7 +147,7 @@ content:
     type: options_select
     region: content
   field_course_location:
-    weight: 13
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -137,7 +155,7 @@ content:
     type: string_textfield
     region: content
   field_course_name:
-    weight: 7
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -145,7 +163,7 @@ content:
     type: string_textfield
     region: content
   field_course_number:
-    weight: 8
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -153,15 +171,29 @@ content:
     type: string_textfield
     region: content
   field_course_section:
-    weight: 10
+    weight: 9
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_course_time:
+    weight: 13
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+    type: time_range_widget
+    region: content
+  field_course_year:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_credit_hours:
-    weight: 15
+    weight: 16
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -173,6 +205,12 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_degree_track:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_instructor:
     weight: 3
     settings:
@@ -183,8 +221,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_students:
-    weight: 9
+  field_meets_reference:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_policy_topics:
+    weight: 10
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -192,6 +236,32 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_promotion_term:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_research_centers:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_semester:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_syllabus_file:
     type: media_library_widget
@@ -208,8 +278,18 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_tags:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_um_course_number:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
