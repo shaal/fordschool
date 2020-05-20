@@ -9,7 +9,7 @@ id: node.news.field_impact_story_name
 field_name: field_impact_story_name
 entity_type: node
 bundle: news
-label: 'Impact Story Name'
+label: 'Teaser Name'
 description: ''
 required: false
 translatable: false
