@@ -1,0 +1,31 @@
+uuid: 19d4ea1f-721b-431e-8ad9-a7f01135d42f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_publications
+    - node.type.profile
+    - paragraphs.paragraphs_type.publications
+  module:
+    - entity_reference_revisions
+id: node.profile.field_related_publications
+field_name: field_related_publications
+entity_type: node
+bundle: profile
+label: 'Related Publications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      publications: publications
+    target_bundles_drag_drop:
+      publications:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
