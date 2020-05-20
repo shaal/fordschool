@@ -1,0 +1,28 @@
+uuid: dea34e8a-4c15-4362-9c0b-7cacfda31a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_audio
+    - media.type.audio
+    - node.type.news
+id: node.news.field_related_audio
+field_name: field_related_audio
+entity_type: node
+bundle: news
+label: 'Related Audio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.video.field_teaser_image
     - field.field.node.video.field_transcript_file
     - field.field.node.video.field_transcript_text
+    - field.field.node.video.field_video
     - field.field.node.video.field_video_date
     - field.field.node.video.field_video_playlist
     - node.type.video
@@ -52,5 +53,6 @@ hidden:
   field_teaser_image: true
   field_transcript_file: true
   field_transcript_text: true
+  field_video: true
   field_video_date: true
   field_video_playlist: true

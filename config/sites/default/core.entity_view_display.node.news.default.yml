@@ -4,19 +4,29 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_byline
     - field.field.node.news.field_contact
     - field.field.node.news.field_date
+    - field.field.node.news.field_event_series
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_impact_story_degree
     - field.field.node.news.field_impact_story_headline
     - field.field.node.news.field_impact_story_name
+    - field.field.node.news.field_in_the_news_link
+    - field.field.node.news.field_news_type
     - field.field.node.news.field_page_lead
+    - field.field.node.news.field_policy_topics
+    - field.field.node.news.field_related_audio
+    - field.field.node.news.field_related_people
     - field.field.node.news.field_related_video
+    - field.field.node.news.field_research_centers
+    - field.field.node.news.field_tags
     - field.field.node.news.field_teaser_image
     - field.field.node.news.field_teaser_text
     - node.type.news
   module:
     - datetime
+    - link
     - text
     - user
 id: node.news.default
@@ -31,34 +41,53 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_byline:
+    weight: 126
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_contact:
     weight: 116
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_date:
     weight: 117
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_featured_image:
-    weight: 112
-    label: above
+  field_event_series:
+    weight: 125
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_featured_image:
+    weight: 112
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_impact_story_degree:
     weight: 111
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -66,7 +95,7 @@ content:
     region: content
   field_impact_story_headline:
     weight: 109
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -74,38 +103,106 @@ content:
     region: content
   field_impact_story_name:
     weight: 110
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_in_the_news_link:
+    weight: 119
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_type:
+    weight: 118
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_page_lead:
     weight: 114
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_related_video:
-    weight: 113
-    label: above
+  field_policy_topics:
+    weight: 120
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_related_audio:
+    weight: 123
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_related_people:
+    weight: 122
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_related_video:
+    weight: 113
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_research_centers:
+    weight: 121
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_tags:
+    weight: 124
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_teaser_image:
     weight: 115
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_teaser_text:
     weight: 108
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -113,7 +210,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
