@@ -6,8 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.profile.field_bio
     - field.field.node.profile.field_build_location
+    - field.field.node.profile.field_course_year
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_degree_track
     - field.field.node.profile.field_department_reference
     - field.field.node.profile.field_educational_background
     - field.field.node.profile.field_facebook_url
@@ -33,6 +35,8 @@ dependencies:
     - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_semester
+    - field.field.node.profile.field_short_bio_teaser
     - field.field.node.profile.field_short_profile_title
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
@@ -54,8 +58,10 @@ content:
 hidden:
   field_bio: true
   field_build_location: true
+  field_course_year: true
   field_current_research: true
   field_curriculum_vitae: true
+  field_degree_track: true
   field_department_reference: true
   field_educational_background: true
   field_facebook_url: true
@@ -81,6 +87,8 @@ hidden:
   field_profile_type: true
   field_profile_zip: true
   field_recent_publications: true
+  field_semester: true
+  field_short_bio_teaser: true
   field_short_profile_title: true
   field_twitter_url: true
   field_uniqname: true
