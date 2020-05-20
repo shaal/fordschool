@@ -34,6 +34,7 @@ dependencies:
     - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_related_publications
     - field.field.node.profile.field_semester
     - field.field.node.profile.field_short_bio_teaser
     - field.field.node.profile.field_short_profile_title
@@ -43,6 +44,7 @@ dependencies:
     - field.field.node.profile.field_youtube_url
     - node.type.profile
   module:
+    - entity_reference_revisions
     - link
     - text
     - user
@@ -312,6 +314,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_related_publications:
+    type: entity_reference_revisions_entity_view
+    weight: 143
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_semester:
     weight: 139

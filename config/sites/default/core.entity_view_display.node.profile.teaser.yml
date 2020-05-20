@@ -35,6 +35,7 @@ dependencies:
     - field.field.node.profile.field_profile_type
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_related_publications
     - field.field.node.profile.field_semester
     - field.field.node.profile.field_short_bio_teaser
     - field.field.node.profile.field_short_profile_title
@@ -87,6 +88,7 @@ hidden:
   field_profile_type: true
   field_profile_zip: true
   field_recent_publications: true
+  field_related_publications: true
   field_semester: true
   field_short_bio_teaser: true
   field_short_profile_title: true
