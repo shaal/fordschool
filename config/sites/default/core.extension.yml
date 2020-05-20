@@ -11,6 +11,7 @@ module:
   config_split: 0
   contextual: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
@@ -33,8 +34,10 @@ module:
   quickedit: 0
   rdf: 0
   shortcut: 0
+  simple_sitemap: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   toolbar: 0
   update: 0

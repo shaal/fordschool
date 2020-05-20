@@ -1,0 +1,8 @@
+uuid: a592ce8d-450e-4d30-a0dd-3a7a26fc2d2b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Profile Category'
+vid: profile_category
+description: 'Used on profile content, specifically for faculty profiles. This taxonomy allows you to further categorize faculty members.'
+weight: 0

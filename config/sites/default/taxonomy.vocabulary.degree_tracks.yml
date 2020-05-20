@@ -1,0 +1,8 @@
+uuid: 547cd1ec-fdea-4ca5-9542-57faca7dfb9b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Degree Tracks'
+vid: degree_tracks
+description: 'This vocabulary is used to indicate degree relationships. It is used on profiles, courses, and map graduates.'
+weight: 0

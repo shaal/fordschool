@@ -1,0 +1,8 @@
+uuid: 887a6f22-be89-4125-bbc6-9bbd3488086b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Video Playlist'
+vid: video_playlist
+description: 'This vocabulary is used to organize video content into playlists.'
+weight: 0

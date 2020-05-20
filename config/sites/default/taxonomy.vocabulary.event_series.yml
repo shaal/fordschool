@@ -1,0 +1,8 @@
+uuid: 67e5291a-9941-48a2-936f-fca3b4bb5883
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Series'
+vid: event_series
+description: 'Used to indicate news, video, or event items related to an event series.'
+weight: 0

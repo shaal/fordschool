@@ -1,0 +1,19 @@
+uuid: 52969c3f-e02a-41d4-94da-238459522f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_story_name
+    - node.type.news
+id: node.news.field_impact_story_name
+field_name: field_impact_story_name
+entity_type: node
+bundle: news
+label: 'Teaser Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
