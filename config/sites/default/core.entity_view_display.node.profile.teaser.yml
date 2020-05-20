@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.profile.field_bio
+    - field.field.node.profile.field_build_location
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
     - field.field.node.profile.field_department_reference
@@ -24,6 +25,7 @@ dependencies:
     - field.field.node.profile.field_phone_number
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
+    - field.field.node.profile.field_profile_campus_zip
     - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_city
     - field.field.node.profile.field_profile_state
@@ -51,6 +53,7 @@ content:
     region: content
 hidden:
   field_bio: true
+  field_build_location: true
   field_current_research: true
   field_curriculum_vitae: true
   field_department_reference: true
@@ -70,6 +73,7 @@ hidden:
   field_phone_number: true
   field_professional_affiliations: true
   field_profile_address: true
+  field_profile_campus_zip: true
   field_profile_category: true
   field_profile_city: true
   field_profile_state: true

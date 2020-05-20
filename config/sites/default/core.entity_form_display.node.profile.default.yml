@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.profile.field_bio
+    - field.field.node.profile.field_build_location
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
     - field.field.node.profile.field_department_reference
@@ -23,6 +24,7 @@ dependencies:
     - field.field.node.profile.field_phone_number
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
+    - field.field.node.profile.field_profile_campus_zip
     - field.field.node.profile.field_profile_category
     - field.field.node.profile.field_profile_city
     - field.field.node.profile.field_profile_state
@@ -197,6 +199,14 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_build_location:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_current_research:
     weight: 27
     settings:
@@ -350,6 +360,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_profile_campus_zip:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_profile_category:
     weight: 3

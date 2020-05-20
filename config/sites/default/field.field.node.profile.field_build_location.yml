@@ -1,0 +1,19 @@
+uuid: 48b1a299-4a47-4734-98ce-e85868d6a436
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_build_location
+    - node.type.profile
+id: node.profile.field_build_location
+field_name: field_build_location
+entity_type: node
+bundle: profile
+label: 'Build Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
