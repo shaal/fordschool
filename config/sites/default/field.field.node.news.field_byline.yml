@@ -1,15 +1,15 @@
-uuid: 194adba3-81c6-4446-92ac-6ce60f1da463
+uuid: 117fa049-ad5a-483d-bacc-56b5d3c3223a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_impact_story_degree
+    - field.storage.node.field_byline
     - node.type.news
-id: node.news.field_impact_story_degree
-field_name: field_impact_story_degree
+id: node.news.field_byline
+field_name: field_byline
 entity_type: node
 bundle: news
-label: 'Teaser Degree'
+label: Byline
 description: ''
 required: false
 translatable: false
