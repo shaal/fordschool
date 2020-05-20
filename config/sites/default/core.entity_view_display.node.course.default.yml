@@ -22,7 +22,6 @@ dependencies:
     - field.field.node.course.field_promotion_term
     - field.field.node.course.field_research_centers
     - field.field.node.course.field_semester
-    - field.field.node.course.field_students
     - field.field.node.course.field_syllabus_file
     - field.field.node.course.field_syllabus_link
     - field.field.node.course.field_tags
@@ -199,15 +198,6 @@ content:
     region: content
   field_semester:
     weight: 118
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_students:
-    weight: 115
     label: hidden
     settings:
       link: true

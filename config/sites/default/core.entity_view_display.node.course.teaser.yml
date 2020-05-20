@@ -23,7 +23,6 @@ dependencies:
     - field.field.node.course.field_promotion_term
     - field.field.node.course.field_research_centers
     - field.field.node.course.field_semester
-    - field.field.node.course.field_students
     - field.field.node.course.field_syllabus_file
     - field.field.node.course.field_syllabus_link
     - field.field.node.course.field_tags
@@ -70,7 +69,6 @@ hidden:
   field_promotion_term: true
   field_research_centers: true
   field_semester: true
-  field_students: true
   field_syllabus_file: true
   field_syllabus_link: true
   field_tags: true
