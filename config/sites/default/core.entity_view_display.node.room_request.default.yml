@@ -24,21 +24,21 @@ mode: default
 content:
   field_360_room_embed:
     weight: 109
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_av_features:
     weight: 110
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_calendar_link:
     weight: 104
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -49,17 +49,18 @@ content:
     type: link
     region: content
   field_capacity:
-    weight: 103
-    label: above
+    weight: 111
+    label: hidden
     settings:
-      link_to_entity: false
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: string
+    type: number_integer
     region: content
   field_floor_plan:
     type: entity_reference_entity_view
     weight: 107
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -67,7 +68,7 @@ content:
     region: content
   field_room_features:
     weight: 105
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -75,7 +76,7 @@ content:
   field_room_location:
     type: entity_reference_entity_view
     weight: 106
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -83,7 +84,7 @@ content:
     region: content
   field_room_number:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -91,14 +92,14 @@ content:
     region: content
   field_scheduling:
     weight: 108
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

@@ -1,4 +1,4 @@
-uuid: 8a63b12b-f8f1-42b2-9c71-69789d6e824a
+uuid: f9d564f5-be22-49d6-b1ad-d8d1d6114a5f
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,10 @@ dependencies:
 id: node.field_capacity
 field_name: field_capacity
 entity_type: node
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1
