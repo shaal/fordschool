@@ -1,18 +1,19 @@
-uuid: 221cb095-53b9-492f-93ae-3a10a05e0d8b
+uuid: 8b2a5540-9f83-4e3e-a04c-3964c513fd67
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_students
-field_name: field_students
+    - taxonomy
+id: node.field_meets_reference
+field_name: field_meets_reference
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

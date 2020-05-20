@@ -1,0 +1,8 @@
+uuid: d43c0642-ac16-46d6-902f-3900141e5f48
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Target'
+vid: course_target
+description: 'Used for promotion term fields.'
+weight: 0
