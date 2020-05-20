@@ -26,7 +26,6 @@ dependencies:
     - field.field.node.event.field_subheading
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_time
     - node.type.event
   module:
     - datetime_range
@@ -353,14 +352,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
-  field_time:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   path:
     type: path

@@ -1,18 +1,18 @@
-uuid: 1c22a6ba-42ba-457d-a48a-8faa9e3230c9
+uuid: fee608c8-3e0a-4136-b2c9-520dd35c497d
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_contact
-field_name: field_contact
+id: node.field_in_the_news_link
+field_name: field_in_the_news_link
 entity_type: node
-type: entity_reference
-settings:
-  target_type: node
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
