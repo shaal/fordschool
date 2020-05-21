@@ -1,0 +1,28 @@
+uuid: b4ef591b-3c3c-4f43-9ae3-1ce0b8352b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_location
+    - media.type.image
+    - node.type.room_request
+id: node.room_request.field_room_location
+field_name: field_room_location
+entity_type: node
+bundle: room_request
+label: 'Room Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
