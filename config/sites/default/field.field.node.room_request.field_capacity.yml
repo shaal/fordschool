@@ -1,0 +1,23 @@
+uuid: 8686c3c1-c468-4ebc-85aa-78d2e47cc3b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_capacity
+    - node.type.room_request
+id: node.room_request.field_capacity
+field_name: field_capacity
+entity_type: node
+bundle: room_request
+label: Capacity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 66fd2238-bb10-4980-abc2-96a00ea244c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_calendar_link
+field_name: field_calendar_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
