@@ -1,0 +1,21 @@
+uuid: 0e823d7e-70c4-47ca-9953-d9a479d948cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_av_features
+    - node.type.room_request
+  module:
+    - text
+id: node.room_request.field_av_features
+field_name: field_av_features
+entity_type: node
+bundle: room_request
+label: 'AV Features'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

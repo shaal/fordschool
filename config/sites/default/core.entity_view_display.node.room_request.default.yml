@@ -3,9 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.room_request.body
+    - field.field.node.room_request.field_360_room_embed
+    - field.field.node.room_request.field_av_features
+    - field.field.node.room_request.field_calendar_link
+    - field.field.node.room_request.field_capacity
+    - field.field.node.room_request.field_floor_plan
+    - field.field.node.room_request.field_room_features
+    - field.field.node.room_request.field_room_location
+    - field.field.node.room_request.field_room_number
+    - field.field.node.room_request.field_scheduling
     - node.type.room_request
   module:
+    - link
     - text
     - user
 id: node.room_request.default
@@ -13,16 +22,84 @@ targetEntityType: node
 bundle: room_request
 mode: default
 content:
-  body:
+  field_360_room_embed:
+    weight: 109
     label: hidden
-    type: text_default
-    weight: 101
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
+  field_av_features:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_calendar_link:
+    weight: 104
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_capacity:
+    weight: 111
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_floor_plan:
+    type: entity_reference_entity_view
+    weight: 107
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_room_features:
+    weight: 105
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_room_location:
+    type: entity_reference_entity_view
+    weight: 106
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_room_number:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_scheduling:
+    weight: 108
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
