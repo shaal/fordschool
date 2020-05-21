@@ -28,7 +28,8 @@ third_party_settings:
       children:
         - group_hero
         - group_main
-        - group_components
+        - group_body_components
+        - group_full_width_components
         - group_related_content_terms
       parent_name: ''
       weight: 7
@@ -41,7 +42,6 @@ third_party_settings:
       label: 'Vertical Tabs'
     group_main:
       children:
-        - title
         - body
         - field_contact
         - field_department_reference
@@ -62,7 +62,7 @@ third_party_settings:
         - field_policy_topics
         - field_tags
       parent_name: group_vertical_tabs
-      weight: 23
+      weight: 24
       format_type: tab
       region: content
       format_settings:
@@ -74,6 +74,7 @@ third_party_settings:
       label: 'Related Content & Terms'
     group_hero:
       children:
+        - title
         - field_hero_image
         - field_hero_description
         - field_hero_link
@@ -88,10 +89,9 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Hero
-    group_components:
+    group_body_components:
       children:
         - field_body_components
-        - field_full_width_components
       parent_name: group_vertical_tabs
       weight: 22
       format_type: tab
@@ -102,7 +102,21 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Components
+      label: 'Body Components'
+    group_full_width_components:
+      children:
+        - field_full_width_components
+      parent_name: group_vertical_tabs
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Full Width Components'
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -126,7 +140,8 @@ content:
     third_party_settings: {  }
   field_body_components:
     type: entity_reference_paragraphs
-    weight: 26
+    weight: 4
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -135,7 +150,6 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
   field_contact:
     weight: 2
     settings:
@@ -158,7 +172,8 @@ content:
     region: content
   field_full_width_components:
     type: entity_reference_paragraphs
-    weight: 27
+    weight: 5
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -167,9 +182,8 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
   field_hero_description:
-    weight: 14
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -178,13 +192,13 @@ content:
     region: content
   field_hero_image:
     type: media_library_widget
-    weight: 13
+    weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_hero_link:
-    weight: 15
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
