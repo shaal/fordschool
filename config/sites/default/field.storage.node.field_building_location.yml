@@ -1,11 +1,11 @@
-uuid: 621e1e59-c7c0-4fce-bba8-4bc096722c95
+uuid: ecae088f-d924-4b5d-9500-5ced51242d29
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_build_location
-field_name: field_build_location
+id: node.field_building_location
+field_name: field_building_location
 entity_type: node
 type: string
 settings:

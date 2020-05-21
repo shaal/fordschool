@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.profile.field_bio
-    - field.field.node.profile.field_build_location
+    - field.field.node.profile.field_building_location
     - field.field.node.profile.field_course_year
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
@@ -22,9 +22,10 @@ dependencies:
     - field.field.node.profile.field_linkedin_url
     - field.field.node.profile.field_make_appointment
     - field.field.node.profile.field_middle_name
-    - field.field.node.profile.field_mini_bio
     - field.field.node.profile.field_name_suffix
     - field.field.node.profile.field_phone_number
+    - field.field.node.profile.field_policy_topics
+    - field.field.node.profile.field_press_bio
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
     - field.field.node.profile.field_profile_campus_zip
@@ -36,9 +37,11 @@ dependencies:
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
     - field.field.node.profile.field_related_publications
+    - field.field.node.profile.field_research_centers
     - field.field.node.profile.field_semester
     - field.field.node.profile.field_short_bio_teaser
     - field.field.node.profile.field_short_profile_title
+    - field.field.node.profile.field_tags
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
     - field.field.node.profile.field_website
@@ -58,7 +61,7 @@ content:
     region: content
 hidden:
   field_bio: true
-  field_build_location: true
+  field_building_location: true
   field_course_year: true
   field_current_research: true
   field_curriculum_vitae: true
@@ -75,9 +78,10 @@ hidden:
   field_linkedin_url: true
   field_make_appointment: true
   field_middle_name: true
-  field_mini_bio: true
   field_name_suffix: true
   field_phone_number: true
+  field_policy_topics: true
+  field_press_bio: true
   field_professional_affiliations: true
   field_profile_address: true
   field_profile_campus_zip: true
@@ -89,9 +93,11 @@ hidden:
   field_profile_zip: true
   field_recent_publications: true
   field_related_publications: true
+  field_research_centers: true
   field_semester: true
   field_short_bio_teaser: true
   field_short_profile_title: true
+  field_tags: true
   field_twitter_url: true
   field_uniqname: true
   field_website: true

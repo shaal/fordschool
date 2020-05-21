@@ -9,7 +9,7 @@ id: node.profile.field_short_bio_teaser
 field_name: field_short_bio_teaser
 entity_type: node
 bundle: profile
-label: 'Short Bio Teaser'
+label: 'Short Teaser Bio'
 description: ''
 required: false
 translatable: false

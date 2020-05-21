@@ -1,12 +1,12 @@
-uuid: 3c30534d-8b74-49ee-a6c1-87cee8a4f02d
+uuid: d42c4152-1770-4416-af21-7ff084cd39ac
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_mini_bio
-field_name: field_mini_bio
+id: node.field_press_bio
+field_name: field_press_bio
 entity_type: node
 type: text_long
 settings: {  }

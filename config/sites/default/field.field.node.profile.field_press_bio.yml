@@ -1,17 +1,17 @@
-uuid: c0113d22-9496-4ff3-a67f-c186c2d4fc48
+uuid: 945ac33b-298d-4e30-bcd6-a432ff408dca
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_mini_bio
+    - field.storage.node.field_press_bio
     - node.type.profile
   module:
     - text
-id: node.profile.field_mini_bio
-field_name: field_mini_bio
+id: node.profile.field_press_bio
+field_name: field_press_bio
 entity_type: node
 bundle: profile
-label: 'Mini Bio'
+label: 'Press Bio'
 description: ''
 required: false
 translatable: false

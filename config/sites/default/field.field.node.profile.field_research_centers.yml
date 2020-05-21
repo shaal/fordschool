@@ -1,0 +1,29 @@
+uuid: 17bdc47e-2341-4219-b3c9-dbc3c3039737
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_centers
+    - node.type.profile
+    - taxonomy.vocabulary.departments_and_research_centers
+id: node.profile.field_research_centers
+field_name: field_research_centers
+entity_type: node
+bundle: profile
+label: 'Related Research Centers'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments_and_research_centers: departments_and_research_centers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

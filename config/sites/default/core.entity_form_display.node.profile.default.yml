@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.profile.field_bio
-    - field.field.node.profile.field_build_location
+    - field.field.node.profile.field_building_location
     - field.field.node.profile.field_course_year
     - field.field.node.profile.field_current_research
     - field.field.node.profile.field_curriculum_vitae
@@ -21,9 +21,10 @@ dependencies:
     - field.field.node.profile.field_linkedin_url
     - field.field.node.profile.field_make_appointment
     - field.field.node.profile.field_middle_name
-    - field.field.node.profile.field_mini_bio
     - field.field.node.profile.field_name_suffix
     - field.field.node.profile.field_phone_number
+    - field.field.node.profile.field_policy_topics
+    - field.field.node.profile.field_press_bio
     - field.field.node.profile.field_professional_affiliations
     - field.field.node.profile.field_profile_address
     - field.field.node.profile.field_profile_campus_zip
@@ -35,9 +36,11 @@ dependencies:
     - field.field.node.profile.field_profile_zip
     - field.field.node.profile.field_recent_publications
     - field.field.node.profile.field_related_publications
+    - field.field.node.profile.field_research_centers
     - field.field.node.profile.field_semester
     - field.field.node.profile.field_short_bio_teaser
     - field.field.node.profile.field_short_profile_title
+    - field.field.node.profile.field_tags
     - field.field.node.profile.field_twitter_url
     - field.field.node.profile.field_uniqname
     - field.field.node.profile.field_website
@@ -55,8 +58,8 @@ third_party_settings:
     group_main:
       children:
         - title
-        - field_mini_bio
         - field_bio
+        - field_press_bio
         - field_profile_category
         - field_profile_type
         - field_department_reference
@@ -81,6 +84,7 @@ third_party_settings:
       label: Main
     group_location_contact:
       children:
+        - field_building_location
         - field_profile_address
         - field_profile_city
         - field_profile_state
@@ -88,7 +92,6 @@ third_party_settings:
         - field_profile_campus_zip
         - field_fax
         - field_phone_number
-        - field_build_location
       parent_name: group_vertical_tabs
       weight: 38
       format_type: tab
@@ -146,7 +149,7 @@ third_party_settings:
         - field_course_year
         - field_degree_track
       parent_name: group_vertical_tabs
-      weight: 41
+      weight: 42
       format_type: tab
       region: content
       format_settings:
@@ -161,7 +164,7 @@ third_party_settings:
         - field_short_profile_title
         - field_short_bio_teaser
       parent_name: group_vertical_tabs
-      weight: 42
+      weight: 43
       format_type: tab
       region: content
       format_settings:
@@ -177,6 +180,7 @@ third_party_settings:
         - group_location_contact
         - group_professional_experience
         - group_related_links
+        - group_related_content_terms
         - group_student_profile
         - group_teaser_display
       parent_name: ''
@@ -188,6 +192,22 @@ third_party_settings:
         classes: ''
         direction: vertical
       label: 'Vertical Tabs'
+    group_related_content_terms:
+      children:
+        - field_policy_topics
+        - field_research_centers
+        - field_tags
+      parent_name: group_vertical_tabs
+      weight: 41
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Related Content & Terms'
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -200,7 +220,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_bio:
-    weight: 2
+    weight: 1
     settings:
       rows: 9
       placeholder: ''
@@ -209,8 +229,8 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  field_build_location:
-    weight: 24
+  field_building_location:
+    weight: 48
     settings:
       size: 60
       placeholder: ''
@@ -281,7 +301,7 @@ content:
     type: link_default
     region: content
   field_fax:
-    weight: 22
+    weight: 54
     settings:
       size: 60
       placeholder: ''
@@ -351,14 +371,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_mini_bio:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_name_suffix:
     weight: 10
     settings:
@@ -368,12 +380,30 @@ content:
     type: string_textfield
     region: content
   field_phone_number:
-    weight: 23
+    weight: 55
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_policy_topics:
+    weight: 44
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_press_bio:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_professional_affiliations:
     weight: 26
@@ -384,7 +414,7 @@ content:
     type: text_textarea
     region: content
   field_profile_address:
-    weight: 17
+    weight: 49
     settings:
       rows: 5
       placeholder: ''
@@ -392,7 +422,7 @@ content:
     type: string_textarea
     region: content
   field_profile_campus_zip:
-    weight: 21
+    weight: 53
     settings:
       size: 60
       placeholder: ''
@@ -410,7 +440,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_profile_city:
-    weight: 18
+    weight: 50
     settings:
       size: 60
       placeholder: ''
@@ -418,7 +448,7 @@ content:
     type: string_textfield
     region: content
   field_profile_state:
-    weight: 19
+    weight: 51
     settings:
       size: 60
       placeholder: ''
@@ -444,7 +474,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_profile_zip:
-    weight: 20
+    weight: 52
     settings:
       size: 60
       placeholder: ''
@@ -471,6 +501,16 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
+  field_research_centers:
+    weight: 45
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_semester:
     weight: 45
     settings:
@@ -496,6 +536,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_tags:
+    weight: 46
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_twitter_url:
     weight: 31
