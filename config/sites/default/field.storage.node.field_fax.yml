@@ -1,16 +1,17 @@
-uuid: c8ad1e0e-3fb7-4813-bd07-d17e16d8b630
+uuid: b08f63b3-6c3c-4f88-8879-b6da0ac26ec4
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_fax
+field_name: field_fax
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: media
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

@@ -1,0 +1,23 @@
+uuid: f353c412-aa0c-41a2-9183-156a8a8a62d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_make_appointment
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_make_appointment
+field_name: field_make_appointment
+entity_type: node
+bundle: profile
+label: 'Make appointment link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

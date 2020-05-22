@@ -1,0 +1,23 @@
+uuid: 682c648b-e875-4eb6-a7e8-586cfbba7fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter_url
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_twitter_url
+field_name: field_twitter_url
+entity_type: node
+bundle: profile
+label: 'Twitter URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,28 @@
+uuid: f7d29ce0-0242-4e21-8cd7-1414e03002e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curriculum_vitae
+    - media.type.document
+    - node.type.profile
+id: node.profile.field_curriculum_vitae
+field_name: field_curriculum_vitae
+entity_type: node
+bundle: profile
+label: 'Curriculum vitae'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

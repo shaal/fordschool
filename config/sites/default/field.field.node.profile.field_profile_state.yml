@@ -1,0 +1,19 @@
+uuid: 986703e1-9d57-4ad4-b6f7-52a9d90ae125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_state
+    - node.type.profile
+id: node.profile.field_profile_state
+field_name: field_profile_state
+entity_type: node
+bundle: profile
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

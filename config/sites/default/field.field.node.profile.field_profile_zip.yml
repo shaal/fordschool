@@ -1,0 +1,19 @@
+uuid: ed2e68a0-742d-4a06-9180-b833107e3f5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_zip
+    - node.type.profile
+id: node.profile.field_profile_zip
+field_name: field_profile_zip
+entity_type: node
+bundle: profile
+label: Zip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
