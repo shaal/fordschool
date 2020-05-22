@@ -5,6 +5,16 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_body_components
+    - field.field.node.landing_page.field_contact
+    - field.field.node.landing_page.field_department_reference
+    - field.field.node.landing_page.field_full_width_components
+    - field.field.node.landing_page.field_hero_description
+    - field.field.node.landing_page.field_hero_image
+    - field.field.node.landing_page.field_hero_link
+    - field.field.node.landing_page.field_policy_topics
+    - field.field.node.landing_page.field_related_links
+    - field.field.node.landing_page.field_tags
     - node.type.landing_page
   module:
     - text
@@ -27,4 +37,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_body_components: true
+  field_contact: true
+  field_department_reference: true
+  field_full_width_components: true
+  field_hero_description: true
+  field_hero_image: true
+  field_hero_link: true
+  field_policy_topics: true
+  field_related_links: true
+  field_tags: true
