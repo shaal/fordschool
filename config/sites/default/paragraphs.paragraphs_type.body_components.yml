@@ -1,0 +1,10 @@
+uuid: 78125778-0ced-4abd-8e41-e29c39522e78
+langcode: en
+status: true
+dependencies: {  }
+id: body_components
+label: 'Body Components'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

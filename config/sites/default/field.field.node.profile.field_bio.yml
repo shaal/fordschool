@@ -1,20 +1,20 @@
-uuid: aa6466b1-7d79-4621-8d13-502f1aece9d7
+uuid: b278f4b5-f4df-4ac9-b3eb-539bb273ba42
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_bio
     - node.type.profile
   module:
     - text
-id: node.profile.body
-field_name: body
+id: node.profile.field_bio
+field_name: field_bio
 entity_type: node
 bundle: profile
-label: Body
+label: Bio
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

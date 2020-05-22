@@ -1,0 +1,21 @@
+uuid: 0cd1dcbd-b7b8-478a-9746-e742c40e45cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recent_publications
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_recent_publications
+field_name: field_recent_publications
+entity_type: node
+bundle: profile
+label: 'Recent publications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

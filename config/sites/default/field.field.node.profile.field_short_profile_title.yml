@@ -1,0 +1,19 @@
+uuid: 87afb9f3-dc67-43af-8023-c69bd0d27b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_profile_title
+    - node.type.profile
+id: node.profile.field_short_profile_title
+field_name: field_short_profile_title
+entity_type: node
+bundle: profile
+label: 'Short Teaser Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
