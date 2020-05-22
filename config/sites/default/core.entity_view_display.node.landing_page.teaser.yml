@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_body_components
     - field.field.node.landing_page.field_contact
+    - field.field.node.landing_page.field_department_reference
     - field.field.node.landing_page.field_full_width_components
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_image
@@ -39,6 +40,7 @@ content:
 hidden:
   field_body_components: true
   field_contact: true
+  field_department_reference: true
   field_full_width_components: true
   field_hero_description: true
   field_hero_image: true

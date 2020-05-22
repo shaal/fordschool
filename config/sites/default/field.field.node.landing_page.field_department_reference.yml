@@ -1,0 +1,29 @@
+uuid: b7d56357-a29d-4e77-8f17-656386374131
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_reference
+    - node.type.landing_page
+    - taxonomy.vocabulary.departments_and_research_centers
+id: node.landing_page.field_department_reference
+field_name: field_department_reference
+entity_type: node
+bundle: landing_page
+label: 'Department Contact(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments_and_research_centers: departments_and_research_centers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
