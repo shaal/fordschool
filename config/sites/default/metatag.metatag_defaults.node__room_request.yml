@@ -1,0 +1,12 @@
+uuid: 8091fd32-1da5-4039-99b5-e5a0a25af899
+langcode: en
+status: true
+dependencies: {  }
+id: node__room_request
+label: 'Content: Room Request'
+tags:
+  description: '[node:field_room_features]'
+  image_src: '[node:field_room_location:entity:url]'
+  og_image: '[node:field_room_location]'
+  og_image_url: '[node:field_room_location]'
+  twitter_cards_image: '[node:field_room_location:entity:url]'
