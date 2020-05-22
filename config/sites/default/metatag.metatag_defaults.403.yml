@@ -1,0 +1,14 @@
+uuid: 20b35f68-aae1-4f17-9dca-4f532585c899
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Da5YWhJdKLxaJ9gDRI1u5oCbm5WBxiiDgA4M1QrOEPQ
+id: '403'
+label: '403 access denied'
+tags:
+  shortlink: '[site:url]'
+  title: '[site:name]'
+  canonical_url: '[site:url]'
+  og_url: '[site:url]'
+  twitter_cards_page_url: '[site:url]'

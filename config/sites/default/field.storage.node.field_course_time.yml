@@ -1,0 +1,19 @@
+uuid: 8bc4db7c-a68a-4a4a-9fca-f660e8f8c134
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - time_field
+id: node.field_course_time
+field_name: field_course_time
+entity_type: node
+type: time_range
+settings: {  }
+module: time_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

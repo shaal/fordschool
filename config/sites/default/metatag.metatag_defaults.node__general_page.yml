@@ -1,0 +1,8 @@
+uuid: 2d1f55a1-ac4d-4fef-9d73-61b8e0f11e9b
+langcode: en
+status: true
+dependencies: {  }
+id: node__general_page
+label: 'Content: General Page'
+tags:
+  image_src: '[node:field_teaser_image]'
