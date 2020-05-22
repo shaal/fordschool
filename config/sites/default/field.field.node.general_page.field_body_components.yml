@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_body_components
     - node.type.general_page
+    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.body_components
   module:
     - entity_reference_revisions
@@ -24,7 +25,11 @@ settings:
     negate: 0
     target_bundles:
       body_components: body_components
+      accordion: accordion
     target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 5
       body_components:
         enabled: true
         weight: 4

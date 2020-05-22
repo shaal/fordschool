@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.general_page.body
     - field.field.node.general_page.field_body_components
     - field.field.node.general_page.field_contact
-    - field.field.node.general_page.field_content_area
     - field.field.node.general_page.field_content_owner
     - field.field.node.general_page.field_department_reference
     - field.field.node.general_page.field_files
@@ -52,15 +51,6 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  field_content_area:
-    type: entity_reference_revisions_entity_view
-    weight: 114
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
     region: content
   field_content_owner:
     weight: 113

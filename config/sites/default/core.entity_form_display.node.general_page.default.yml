@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.general_page.body
     - field.field.node.general_page.field_body_components
     - field.field.node.general_page.field_contact
-    - field.field.node.general_page.field_content_area
     - field.field.node.general_page.field_content_owner
     - field.field.node.general_page.field_department_reference
     - field.field.node.general_page.field_files
@@ -30,7 +29,6 @@ third_party_settings:
     group_vertical_tabs:
       children:
         - group_main
-        - group_content_area
         - group_components
         - group_related_content_terms
       parent_name: ''
@@ -80,9 +78,9 @@ third_party_settings:
     group_related_content_terms:
       children:
         - field_files
+        - field_related_links
         - field_policy_topics
         - field_research_centers
-        - field_related_links
         - field_tags
       parent_name: group_vertical_tabs
       weight: 23
@@ -95,20 +93,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Related Content & Terms'
-    group_content_area:
-      children:
-        - field_content_area
-      parent_name: group_vertical_tabs
-      weight: 21
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: 'Content Area'
 id: node.general_page.default
 targetEntityType: node
 bundle: general_page
@@ -151,18 +135,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_content_area:
-    type: entity_reference_paragraphs
-    weight: 32
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
     region: content
   field_content_owner:
     weight: 7
@@ -207,7 +179,7 @@ content:
     type: string_textarea
     region: content
   field_policy_topics:
-    weight: 28
+    weight: 29
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -217,7 +189,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_related_links:
-    weight: 31
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -243,7 +215,7 @@ content:
     type: string_textfield
     region: content
   field_tags:
-    weight: 32
+    weight: 31
     settings:
       match_operator: CONTAINS
       match_limit: 10
