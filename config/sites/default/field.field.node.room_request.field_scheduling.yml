@@ -1,0 +1,21 @@
+uuid: 98a8df71-5e22-46a8-8b0f-e2a7f30b9c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scheduling
+    - node.type.room_request
+  module:
+    - text
+id: node.room_request.field_scheduling
+field_name: field_scheduling
+entity_type: node
+bundle: room_request
+label: Scheduling
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
