@@ -4,14 +4,21 @@ status: true
 dependencies:
   config:
     - field.field.node.general_page.body
+    - field.field.node.general_page.field_body_components
     - field.field.node.general_page.field_contact
+    - field.field.node.general_page.field_content_owner
+    - field.field.node.general_page.field_department_reference
     - field.field.node.general_page.field_files
     - field.field.node.general_page.field_image
     - field.field.node.general_page.field_page_lead
+    - field.field.node.general_page.field_policy_topics
     - field.field.node.general_page.field_related_links
+    - field.field.node.general_page.field_research_centers
     - field.field.node.general_page.field_subheading
+    - field.field.node.general_page.field_tags
     - node.type.general_page
   module:
+    - entity_reference_revisions
     - link
     - text
     - user
@@ -27,18 +34,46 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_body_components:
+    weight: 112
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_contact:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_content_owner:
+    weight: 113
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_department_reference:
+    weight: 111
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_files:
     type: entity_reference_entity_view
     weight: 103
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -47,7 +82,7 @@ content:
   field_image:
     type: entity_reference_entity_view
     weight: 105
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -55,14 +90,23 @@ content:
     region: content
   field_page_lead:
     weight: 107
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_policy_topics:
+    weight: 108
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_related_links:
     weight: 104
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -72,17 +116,35 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_research_centers:
+    weight: 109
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_subheading:
     weight: 106
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    weight: 110
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

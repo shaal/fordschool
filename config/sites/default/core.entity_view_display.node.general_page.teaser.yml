@@ -5,12 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.general_page.body
+    - field.field.node.general_page.field_body_components
     - field.field.node.general_page.field_contact
+    - field.field.node.general_page.field_content_owner
+    - field.field.node.general_page.field_department_reference
     - field.field.node.general_page.field_files
     - field.field.node.general_page.field_image
     - field.field.node.general_page.field_page_lead
+    - field.field.node.general_page.field_policy_topics
     - field.field.node.general_page.field_related_links
+    - field.field.node.general_page.field_research_centers
     - field.field.node.general_page.field_subheading
+    - field.field.node.general_page.field_tags
     - node.type.general_page
   module:
     - text
@@ -34,9 +40,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_body_components: true
   field_contact: true
+  field_content_owner: true
+  field_department_reference: true
   field_files: true
   field_image: true
   field_page_lead: true
+  field_policy_topics: true
   field_related_links: true
+  field_research_centers: true
   field_subheading: true
+  field_tags: true

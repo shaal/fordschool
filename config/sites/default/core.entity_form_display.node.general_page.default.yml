@@ -4,17 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.general_page.body
+    - field.field.node.general_page.field_body_components
     - field.field.node.general_page.field_contact
+    - field.field.node.general_page.field_content_owner
+    - field.field.node.general_page.field_department_reference
     - field.field.node.general_page.field_files
     - field.field.node.general_page.field_image
     - field.field.node.general_page.field_page_lead
+    - field.field.node.general_page.field_policy_topics
     - field.field.node.general_page.field_related_links
+    - field.field.node.general_page.field_research_centers
     - field.field.node.general_page.field_subheading
+    - field.field.node.general_page.field_tags
     - node.type.general_page
   module:
     - field_group
     - link
     - media_library
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -41,6 +48,8 @@ third_party_settings:
         - body
         - field_image
         - field_contact
+        - field_department_reference
+        - field_content_owner
       parent_name: group_vertical_tabs
       weight: 20
       format_type: tab
@@ -53,9 +62,10 @@ third_party_settings:
         required_fields: true
       label: Main
     group_components:
-      children: {  }
+      children:
+        - field_body_components
       parent_name: group_vertical_tabs
-      weight: 21
+      weight: 22
       format_type: tab
       region: content
       format_settings:
@@ -69,8 +79,11 @@ third_party_settings:
       children:
         - field_files
         - field_related_links
+        - field_policy_topics
+        - field_research_centers
+        - field_tags
       parent_name: group_vertical_tabs
-      weight: 22
+      weight: 23
       format_type: tab
       region: content
       format_settings:
@@ -101,6 +114,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body_components:
+    weight: 30
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_contact:
     weight: 5
     settings:
@@ -111,9 +136,29 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_content_owner:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_department_reference:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_files:
     type: media_library_widget
-    weight: 10
+    weight: 27
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -133,13 +178,33 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_policy_topics:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_related_links:
-    weight: 11
+    weight: 28
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_research_centers:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_subheading:
     weight: 1
@@ -148,6 +213,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_tags:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path
