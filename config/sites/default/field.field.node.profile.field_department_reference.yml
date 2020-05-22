@@ -1,0 +1,29 @@
+uuid: 171f30e6-7f55-472c-b03d-3a4a74858720
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_reference
+    - node.type.profile
+    - taxonomy.vocabulary.departments_and_research_centers
+id: node.profile.field_department_reference
+field_name: field_department_reference
+entity_type: node
+bundle: profile
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments_and_research_centers: departments_and_research_centers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

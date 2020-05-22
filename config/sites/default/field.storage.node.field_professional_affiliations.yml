@@ -1,0 +1,19 @@
+uuid: 146a6a45-d44b-4561-9530-15524cbd0d0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_professional_affiliations
+field_name: field_professional_affiliations
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
