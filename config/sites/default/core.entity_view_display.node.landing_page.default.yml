@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_body_components
     - field.field.node.landing_page.field_contact
-    - field.field.node.landing_page.field_department_reference
     - field.field.node.landing_page.field_full_width_components
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_image
@@ -43,15 +42,6 @@ content:
     region: content
   field_contact:
     weight: 102
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_department_reference:
-    weight: 109
     label: hidden
     settings:
       link: true

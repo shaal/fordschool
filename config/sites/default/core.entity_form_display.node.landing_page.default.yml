@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_body_components
     - field.field.node.landing_page.field_contact
-    - field.field.node.landing_page.field_department_reference
     - field.field.node.landing_page.field_full_width_components
     - field.field.node.landing_page.field_hero_description
     - field.field.node.landing_page.field_hero_image
@@ -152,16 +151,6 @@ content:
     third_party_settings: {  }
   field_contact:
     weight: 2
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_department_reference:
-    weight: 3
     settings:
       match_operator: CONTAINS
       match_limit: 10
