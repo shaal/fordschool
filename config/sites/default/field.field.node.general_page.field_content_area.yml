@@ -1,0 +1,37 @@
+uuid: dc7990b7-29da-4d0d-8846-d9a6545370bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_area
+    - node.type.general_page
+    - paragraphs.paragraphs_type.body_components
+  module:
+    - entity_reference_revisions
+id: node.general_page.field_content_area
+field_name: field_content_area
+entity_type: node
+bundle: general_page
+label: 'Content Area'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      body_components: body_components
+    target_bundles_drag_drop:
+      body_components:
+        enabled: true
+        weight: 4
+      full_width_components:
+        weight: 5
+        enabled: false
+      publications:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions
