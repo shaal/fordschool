@@ -1,23 +1,23 @@
-uuid: aa6466b1-7d79-4621-8d13-502f1aece9d7
+uuid: ca108246-bdbc-4b94-ac91-9654bd9a0733
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_educational_background
     - node.type.profile
   module:
     - text
-id: node.profile.body
-field_name: body
+id: node.profile.field_educational_background
+field_name: field_educational_background
 entity_type: node
 bundle: profile
-label: Body
+label: 'Educational background'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
 field_type: text_with_summary

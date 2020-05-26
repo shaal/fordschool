@@ -1,0 +1,21 @@
+uuid: 9eb51e62-3d77-4654-bad7-86173598d4c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_360_room_embed
+    - node.type.room_request
+  module:
+    - text
+id: node.room_request.field_360_room_embed
+field_name: field_360_room_embed
+entity_type: node
+bundle: room_request
+label: '360 Degree Room Photos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

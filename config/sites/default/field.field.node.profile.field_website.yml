@@ -1,0 +1,23 @@
+uuid: e743982c-b61e-45f8-b654-3916bfab64fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_website
+field_name: field_website
+entity_type: node
+bundle: profile
+label: 'View website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

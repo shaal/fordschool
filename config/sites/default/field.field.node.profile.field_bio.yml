@@ -1,20 +1,20 @@
-uuid: 08890fd6-942b-42b3-8a19-0bfbfdb4c38d
+uuid: b278f4b5-f4df-4ac9-b3eb-539bb273ba42
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.room_request
+    - field.storage.node.field_bio
+    - node.type.profile
   module:
     - text
-id: node.room_request.body
-field_name: body
+id: node.profile.field_bio
+field_name: field_bio
 entity_type: node
-bundle: room_request
-label: Body
+bundle: profile
+label: Bio
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

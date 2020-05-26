@@ -1,0 +1,28 @@
+uuid: d41b6734-5594-415d-b7a4-5aa259c06188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.general_page
+    - node.type.profile
+id: node.general_page.field_contact
+field_name: field_contact
+entity_type: node
+bundle: general_page
+label: Contact
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

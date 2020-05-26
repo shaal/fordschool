@@ -3,9 +3,52 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.profile.body
+    - field.field.node.profile.field_bio
+    - field.field.node.profile.field_building_location
+    - field.field.node.profile.field_course_year
+    - field.field.node.profile.field_current_research
+    - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_degree_track
+    - field.field.node.profile.field_department_reference
+    - field.field.node.profile.field_educational_background
+    - field.field.node.profile.field_facebook_url
+    - field.field.node.profile.field_fax
+    - field.field.node.profile.field_first_name
+    - field.field.node.profile.field_flickr_url
+    - field.field.node.profile.field_googleplus_url
+    - field.field.node.profile.field_image
+    - field.field.node.profile.field_last_name
+    - field.field.node.profile.field_linkedin_url
+    - field.field.node.profile.field_make_appointment
+    - field.field.node.profile.field_middle_name
+    - field.field.node.profile.field_name_suffix
+    - field.field.node.profile.field_phone_number
+    - field.field.node.profile.field_policy_topics
+    - field.field.node.profile.field_press_bio
+    - field.field.node.profile.field_professional_affiliations
+    - field.field.node.profile.field_profile_address
+    - field.field.node.profile.field_profile_campus_zip
+    - field.field.node.profile.field_profile_category
+    - field.field.node.profile.field_profile_city
+    - field.field.node.profile.field_profile_state
+    - field.field.node.profile.field_profile_title
+    - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_profile_zip
+    - field.field.node.profile.field_recent_publications
+    - field.field.node.profile.field_related_publications
+    - field.field.node.profile.field_research_centers
+    - field.field.node.profile.field_semester
+    - field.field.node.profile.field_short_bio_teaser
+    - field.field.node.profile.field_short_profile_title
+    - field.field.node.profile.field_tags
+    - field.field.node.profile.field_twitter_url
+    - field.field.node.profile.field_uniqname
+    - field.field.node.profile.field_website
+    - field.field.node.profile.field_youtube_url
     - node.type.profile
   module:
+    - entity_reference_revisions
+    - link
     - text
     - user
 id: node.profile.default
@@ -13,12 +56,366 @@ targetEntityType: node
 bundle: profile
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
+  field_bio:
+    weight: 102
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
+  field_building_location:
+    weight: 144
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_course_year:
+    weight: 140
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_current_research:
+    weight: 120
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_curriculum_vitae:
+    type: entity_reference_entity_view
+    weight: 117
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_degree_track:
+    weight: 141
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_department_reference:
+    weight: 132
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_educational_background:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_facebook_url:
+    weight: 125
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_fax:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_first_name:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_flickr_url:
+    weight: 128
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_googleplus_url:
+    weight: 126
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_last_name:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_linkedin_url:
+    weight: 127
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_make_appointment:
+    weight: 123
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_middle_name:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name_suffix:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_number:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_policy_topics:
+    weight: 146
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_press_bio:
+    weight: 145
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_professional_affiliations:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_address:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_profile_campus_zip:
+    weight: 138
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_category:
+    weight: 131
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profile_city:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_state:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_title:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_profile_type:
+    weight: 130
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profile_zip:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_recent_publications:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_related_publications:
+    type: entity_reference_revisions_entity_view
+    weight: 143
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_research_centers:
+    weight: 147
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_semester:
+    weight: 139
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_short_bio_teaser:
+    weight: 142
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_short_profile_title:
+    weight: 136
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tags:
+    weight: 148
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_twitter_url:
+    weight: 124
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_uniqname:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_website:
+    weight: 122
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_youtube_url:
+    weight: 129
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   links:
     weight: 100

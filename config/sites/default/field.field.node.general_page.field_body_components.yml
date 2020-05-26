@@ -1,0 +1,42 @@
+uuid: 532932a5-e479-4d59-8e99-419963ebe0a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_components
+    - node.type.general_page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.body_components
+  module:
+    - entity_reference_revisions
+id: node.general_page.field_body_components
+field_name: field_body_components
+entity_type: node
+bundle: general_page
+label: 'Body Components'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      body_components: body_components
+      accordion: accordion
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 5
+      body_components:
+        enabled: true
+        weight: 4
+      full_width_components:
+        weight: 5
+        enabled: false
+      publications:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

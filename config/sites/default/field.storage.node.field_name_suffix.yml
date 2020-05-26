@@ -1,15 +1,17 @@
-uuid: 221cb095-53b9-492f-93ae-3a10a05e0d8b
+uuid: 7631e8b3-4520-4bc1-af12-7e4b9810f950
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_students
-field_name: field_students
+id: node.field_name_suffix
+field_name: field_name_suffix
 entity_type: node
-type: entity_reference
+type: string
 settings:
-  target_type: node
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1
